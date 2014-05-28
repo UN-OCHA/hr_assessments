@@ -10,6 +10,38 @@
 function hr_assessments_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_admin_level'
+  $field_bases['field_admin_level'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_admin_level',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'admin0' => 'Admin 0',
+        'admin1' => 'Admin 1',
+        'admin2' => 'Admin 2',
+        'admin3' => 'Admin 3',
+        'admin4' => 'Admin 4',
+        'admin5' => 'Admin 5',
+      ),
+      'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_asst_accessibility'
   $field_bases['field_asst_accessibility'] = array(
     'active' => 1,
@@ -592,6 +624,52 @@ function hr_assessments_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'link_field',
+  );
+
+  // Exported field_base: 'field_geographic_level'
+  $field_bases['field_geographic_level'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_geographic_level',
+    'foreign keys' => array(
+      'node' => array(
+        'columns' => array(
+          'target_id' => 'nid',
+        ),
+        'table' => 'node',
+      ),
+    ),
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'handler' => 'views',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'view' => array(
+          'args' => array(
+            0 => '[current-page:query:og_group_ref]',
+          ),
+          'display_name' => 'entityreference_1',
+          'view_name' => 'hr_geographic_levels',
+        ),
+      ),
+      'profile2_private' => FALSE,
+      'target_type' => 'node',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
   );
 
   // Exported field_base: 'field_organizations2'
