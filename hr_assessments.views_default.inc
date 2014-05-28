@@ -42,44 +42,18 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'There are no results';
   $handler->display->display_options['empty']['area']['format'] = 'plain_text';
-  /* Field: Indexed Node: Clusters/Sectors */
-  $handler->display->display_options['fields']['field_bundles']['id'] = 'field_bundles';
-  $handler->display->display_options['fields']['field_bundles']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_bundles']['field'] = 'field_bundles';
-  $handler->display->display_options['fields']['field_bundles']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_bundles']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_bundles']['bypass_access'] = 0;
-  /* Field: Indexed Node: First name */
-  $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
-  $handler->display->display_options['fields']['field_first_name']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
-  $handler->display->display_options['fields']['field_first_name']['type'] = 'title_linked';
-  $handler->display->display_options['fields']['field_first_name']['settings'] = array(
-    'title_style' => '_none',
-    'title_link' => 'content',
-    'title_class' => '',
-  );
-  /* Field: Indexed Node: Last name */
-  $handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
-  $handler->display->display_options['fields']['field_last_name']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
-  $handler->display->display_options['fields']['field_last_name']['type'] = 'title_linked';
-  $handler->display->display_options['fields']['field_last_name']['settings'] = array(
-    'title_style' => '_none',
-    'title_link' => 'content',
-    'title_class' => '',
-  );
-  /* Field: Indexed Node: Main Email */
-  $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
-  $handler->display->display_options['fields']['field_email']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
-  /* Field: Indexed Node: Job Title */
-  $handler->display->display_options['fields']['field_job_title']['id'] = 'field_job_title';
-  $handler->display->display_options['fields']['field_job_title']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_job_title']['field'] = 'field_job_title';
-  $handler->display->display_options['fields']['field_job_title']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_job_title']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_job_title']['bypass_access'] = 0;
+  /* Field: Indexed Node: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
+  /* Field: Indexed Node: Locations */
+  $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_locations']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_locations']['bypass_access'] = 0;
   /* Field: Indexed Node: Leading/Coordinating Organizations */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
@@ -88,14 +62,64 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_organizations']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_organizations']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_organizations']['bypass_access'] = 0;
-  /* Field: Indexed Node: Location */
-  $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
-  $handler->display->display_options['fields']['field_location']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
-  $handler->display->display_options['fields']['field_location']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_location']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_location']['bypass_access'] = 0;
-  /* Contextual filter: Indexed Node: Groups audience */
+  /* Field: Indexed Node: Participating Organizations */
+  $handler->display->display_options['fields']['field_organizations2']['id'] = 'field_organizations2';
+  $handler->display->display_options['fields']['field_organizations2']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_organizations2']['field'] = 'field_organizations2';
+  $handler->display->display_options['fields']['field_organizations2']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_organizations2']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_organizations2']['bypass_access'] = 0;
+  /* Field: Indexed Node: Clusters/Sectors */
+  $handler->display->display_options['fields']['field_bundles']['id'] = 'field_bundles';
+  $handler->display->display_options['fields']['field_bundles']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_bundles']['field'] = 'field_bundles';
+  $handler->display->display_options['fields']['field_bundles']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_bundles']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_bundles']['bypass_access'] = 0;
+  /* Field: Indexed Node: Status */
+  $handler->display->display_options['fields']['field_asst_status']['id'] = 'field_asst_status';
+  $handler->display->display_options['fields']['field_asst_status']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_status']['field'] = 'field_asst_status';
+  /* Field: Indexed Node: Date */
+  $handler->display->display_options['fields']['field_asst_date']['id'] = 'field_asst_date';
+  $handler->display->display_options['fields']['field_asst_date']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_date']['field'] = 'field_asst_date';
+  $handler->display->display_options['fields']['field_asst_date']['settings'] = array(
+    'format_type' => 'hr_1',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  /* Field: Indexed Node: Assessment Report */
+  $handler->display->display_options['fields']['field_asst_report']['id'] = 'field_asst_report';
+  $handler->display->display_options['fields']['field_asst_report']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_report']['field'] = 'field_asst_report';
+  $handler->display->display_options['fields']['field_asst_report']['label'] = 'Report';
+  $handler->display->display_options['fields']['field_asst_report']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_asst_report']['display'] = 'view';
+  $handler->display->display_options['fields']['field_asst_report']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_asst_report']['bypass_access'] = 0;
+  /* Field: Indexed Node: Assessment Questionnaire */
+  $handler->display->display_options['fields']['field_asst_questionnaire']['id'] = 'field_asst_questionnaire';
+  $handler->display->display_options['fields']['field_asst_questionnaire']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_questionnaire']['field'] = 'field_asst_questionnaire';
+  $handler->display->display_options['fields']['field_asst_questionnaire']['label'] = 'Questionnaire';
+  $handler->display->display_options['fields']['field_asst_questionnaire']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_asst_questionnaire']['display'] = 'view';
+  $handler->display->display_options['fields']['field_asst_questionnaire']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_asst_questionnaire']['bypass_access'] = 0;
+  /* Field: Indexed Node: Assessment Data */
+  $handler->display->display_options['fields']['field_asst_data']['id'] = 'field_asst_data';
+  $handler->display->display_options['fields']['field_asst_data']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_data']['field'] = 'field_asst_data';
+  $handler->display->display_options['fields']['field_asst_data']['label'] = 'Data';
+  $handler->display->display_options['fields']['field_asst_data']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_asst_data']['display'] = 'view';
+  $handler->display->display_options['fields']['field_asst_data']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_asst_data']['bypass_access'] = 0;
+  /* Contextual filter: Indexed Node: Space(s) */
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['arguments']['og_group_ref']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['og_group_ref']['field'] = 'og_group_ref';
@@ -129,63 +153,25 @@ function hr_assessments_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('page', 'Master', 'master');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'table';
-  $handler->display->display_options['style_options']['columns'] = array(
-    'field_bundles' => 'field_bundles',
-    'field_first_name' => 'field_first_name',
-    'field_last_name' => 'field_last_name',
-    'field_email' => 'field_email',
-    'field_job_title' => 'field_job_title',
-    'field_organizations' => 'field_organizations',
-    'field_location' => 'field_location',
-  );
-  $handler->display->display_options['style_options']['default'] = '-1';
-  $handler->display->display_options['style_options']['info'] = array(
-    'field_bundles' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_first_name' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_last_name' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_email' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_job_title' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_organizations' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_location' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-  );
+  $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'search_result';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['path'] = 'node/%/assessments';
+
+  /* Display: List */
+  $handler = $view->new_display('page', 'List', 'list');
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['path'] = 'node/%/assessments/list';
+  $handler->display->display_options['menu']['type'] = 'default tab';
+  $handler->display->display_options['menu']['title'] = 'List';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $handler->display->display_options['tab_options']['weight'] = '0';
 
   /* Display: Table */
   $handler = $view->new_display('page', 'Table', 'table');
@@ -247,22 +233,12 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['path'] = 'node/%/assessments/table';
-  $handler->display->display_options['menu']['type'] = 'default tab';
-  $handler->display->display_options['menu']['title'] = 'Table';
-  $handler->display->display_options['menu']['weight'] = '0';
-  $handler->display->display_options['menu']['context'] = 0;
-  $handler->display->display_options['menu']['context_only_inline'] = 0;
-  $handler->display->display_options['tab_options']['weight'] = '0';
-
-  /* Display: List */
-  $handler = $view->new_display('page', 'List', 'list');
-  $handler->display->display_options['exposed_block'] = TRUE;
-  $handler->display->display_options['path'] = 'node/%/assessments/list';
   $handler->display->display_options['menu']['type'] = 'tab';
-  $handler->display->display_options['menu']['title'] = 'List';
+  $handler->display->display_options['menu']['title'] = 'Table';
   $handler->display->display_options['menu']['weight'] = '2';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $handler->display->display_options['tab_options']['weight'] = '0';
 
   /* Display: CSV */
   $handler = $view->new_display('views_data_export', 'CSV', 'csv');
@@ -298,7 +274,7 @@ function hr_assessments_views_default_views() {
     'title_link' => 'content',
     'title_class' => '',
   );
-  /* Field: Indexed Node: Main Email */
+  /* Field: Indexed Node: Email */
   $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
@@ -378,10 +354,11 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_disasters']['bypass_access'] = 0;
   $handler->display->display_options['path'] = 'node/%/assessments/csv';
   $handler->display->display_options['displays'] = array(
-    'master' => 'master',
-    'table' => 'table',
-    'list' => 'list',
     'default' => 0,
+    'master' => 0,
+    'list' => 0,
+    'table' => 0,
+    'map' => 0,
   );
   $handler->display->display_options['segment_size'] = '100';
 
@@ -445,7 +422,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_organizations']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_organizations']['bypass_access'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Indexed Node: Groups audience */
+  /* Contextual filter: Indexed Node: Space(s) */
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['arguments']['og_group_ref']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['og_group_ref']['field'] = 'og_group_ref';
@@ -517,20 +494,28 @@ function hr_assessments_views_default_views() {
     t('next ›'),
     t('last »'),
     t('There are no results'),
-    t('Clusters/Sectors'),
-    t('First name'),
-    t('Last name'),
-    t('Main Email'),
-    t('Job Title'),
+    t('Title'),
+    t('Locations'),
     t('Organization'),
-    t('Location'),
+    t('Participating Organizations'),
+    t('Clusters/Sectors'),
+    t('Status'),
+    t('Date'),
+    t('Report'),
+    t('Questionnaire'),
+    t('Data'),
     t('All'),
     t('Search Contacts'),
-    t('Table'),
     t('List'),
+    t('Table'),
     t('CSV'),
+    t('First name'),
+    t('Last name'),
+    t('Email'),
     t('Phones'),
     t('Leading/Coordinating Organizations'),
+    t('Job Title'),
+    t('Location'),
     t('Coordination hubs'),
     t('Fundings'),
     t('Themes'),
