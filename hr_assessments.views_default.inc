@@ -141,7 +141,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['exposed'] = TRUE;
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator_id'] = 'search_api_views_fulltext_op';
-  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['label'] = 'Search Contacts';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['label'] = 'Search Assessments';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator'] = 'search_api_views_fulltext_op';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['identifier'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['remember_roles'] = array(
@@ -446,7 +446,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['exposed'] = TRUE;
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator_id'] = 'search_api_views_fulltext_op';
-  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['label'] = 'Search Contacts';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['label'] = 'Search Assessments';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator'] = 'search_api_views_fulltext_op';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['identifier'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['remember_roles'] = array(
@@ -506,7 +506,7 @@ function hr_assessments_views_default_views() {
     t('Questionnaire'),
     t('Data'),
     t('All'),
-    t('Search Contacts'),
+    t('Search Assessments'),
     t('List'),
     t('Table'),
     t('CSV'),
