@@ -262,5 +262,12 @@ function hr_assessments_strongarm() {
   );
   $export['panelizer_node:hr_assessment_default'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_hr_assessment_pattern';
+  $strongarm->value = '[node:og-group-ref:0:url:path]/assessment/[node:title]';
+  $export['pathauto_node_hr_assessment_pattern'] = $strongarm;
+
   return $export;
 }
