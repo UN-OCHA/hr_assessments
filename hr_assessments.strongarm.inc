@@ -22,10 +22,10 @@ function hr_assessments_strongarm() {
           'weight' => '-5',
         ),
         'path' => array(
-          'weight' => '26',
+          'weight' => '27',
         ),
         'redirect' => array(
-          'weight' => '25',
+          'weight' => '26',
         ),
       ),
       'display' => array(),

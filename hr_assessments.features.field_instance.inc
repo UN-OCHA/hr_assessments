@@ -981,7 +981,7 @@ function hr_assessments_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 18,
+      'weight' => 19,
     ),
   );
 
@@ -1044,7 +1044,7 @@ function hr_assessments_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -1090,7 +1090,7 @@ function hr_assessments_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -1293,7 +1293,7 @@ function hr_assessments_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -1343,7 +1343,7 @@ function hr_assessments_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 16,
+      'weight' => 17,
     ),
   );
 
@@ -1440,7 +1440,7 @@ function hr_assessments_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -1652,7 +1652,7 @@ function hr_assessments_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 21,
+      'weight' => 22,
     ),
   );
 
@@ -1936,7 +1936,7 @@ function hr_assessments_field_default_field_instances() {
         ),
       ),
       'type' => 'taxonomy_shs',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -2001,7 +2001,7 @@ function hr_assessments_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 22,
+      'weight' => 23,
     ),
   );
 
@@ -2058,7 +2058,7 @@ function hr_assessments_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 20,
+      'weight' => 21,
     ),
   );
 
@@ -2108,8 +2108,68 @@ function hr_assessments_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 19,
+      'weight' => 20,
     ),
+  );
+
+  // Exported field_instance: 'node-hr_assessment-group_content_access'
+  $field_instances['node-hr_assessment-group_content_access'] = array(
+    'bundle' => 'hr_assessment',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 26,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'group_content_access',
+    'label' => 'Group content visibility',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'view modes' => array(
+      'full' => array(
+        'label' => 'above',
+        'type' => 'list_default',
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'type' => 'list_default',
+      ),
+    ),
+    'widget' => array(
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 24,
+    ),
+    'widget_type' => 'options_select',
   );
 
   // Exported field_instance: 'node-hr_assessment-og_group_ref'
@@ -2184,7 +2244,7 @@ function hr_assessments_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 23,
+      'weight' => 25,
     ),
   );
 
@@ -2460,6 +2520,7 @@ function hr_assessments_field_default_field_instances() {
   t('File');
   t('File (Restricted)');
   t('Frequency');
+  t('Group content visibility');
   t('Groups audience');
   t('Instructions');
   t('Key findings');

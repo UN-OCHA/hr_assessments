@@ -274,7 +274,7 @@ function hr_assessments_views_default_views() {
     'title_link' => 'content',
     'title_class' => '',
   );
-  /* Field: Indexed Node: Email */
+  /* Field: Indexed Node: Main Email */
   $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
@@ -462,6 +462,7 @@ function hr_assessments_views_default_views() {
 
   /* Display: Map */
   $handler = $view->new_display('page', 'Map', 'map');
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -511,7 +512,7 @@ function hr_assessments_views_default_views() {
     t('CSV'),
     t('First name'),
     t('Last name'),
-    t('Email'),
+    t('Main Email'),
     t('Phones'),
     t('Leading/Coordinating Organizations'),
     t('Job Title'),
