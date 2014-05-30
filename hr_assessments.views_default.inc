@@ -245,7 +245,66 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['style_options']['provide_file'] = 1;
+  $handler->display->display_options['style_options']['filename'] = 'assessments.csv';
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['style_options']['quote'] = 1;
+  $handler->display->display_options['style_options']['trim'] = 0;
+  $handler->display->display_options['style_options']['replace_newlines'] = 0;
+  $handler->display->display_options['style_options']['header'] = 1;
+  $handler->display->display_options['style_options']['keep_html'] = 0;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Indexed Node: Assessment Data */
+  $handler->display->display_options['relationships']['field_asst_data']['id'] = 'field_asst_data';
+  $handler->display->display_options['relationships']['field_asst_data']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['relationships']['field_asst_data']['field'] = 'field_asst_data';
+  /* Relationship: Indexed Node: Assessment Questionnaire */
+  $handler->display->display_options['relationships']['field_asst_questionnaire']['id'] = 'field_asst_questionnaire';
+  $handler->display->display_options['relationships']['field_asst_questionnaire']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['relationships']['field_asst_questionnaire']['field'] = 'field_asst_questionnaire';
+  /* Relationship: Indexed Node: Assessment Report */
+  $handler->display->display_options['relationships']['field_asst_report']['id'] = 'field_asst_report';
+  $handler->display->display_options['relationships']['field_asst_report']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['relationships']['field_asst_report']['field'] = 'field_asst_report';
+  /* Relationship: Indexed Node: Contact(s) */
+  $handler->display->display_options['relationships']['field_users_ref']['id'] = 'field_users_ref';
+  $handler->display->display_options['relationships']['field_users_ref']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['relationships']['field_users_ref']['field'] = 'field_users_ref';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Indexed Node: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['link_to_entity'] = 0;
+  /* Field: Indexed Node: Locations */
+  $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations']['label'] = 'Location';
+  $handler->display->display_options['fields']['field_locations']['list']['separator'] = ';';
+  $handler->display->display_options['fields']['field_locations']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_locations']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_locations']['bypass_access'] = 0;
+  /* Field: Indexed Node: Other location */
+  $handler->display->display_options['fields']['field_asst_other_location']['id'] = 'field_asst_other_location';
+  $handler->display->display_options['fields']['field_asst_other_location']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_other_location']['field'] = 'field_asst_other_location';
+  /* Field: Indexed Node: Leading/Coordinating Organizations */
+  $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
+  $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
+  $handler->display->display_options['fields']['field_organizations']['label'] = 'Leading Organizations';
+  $handler->display->display_options['fields']['field_organizations']['list']['separator'] = ';';
+  $handler->display->display_options['fields']['field_organizations']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_organizations']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_organizations']['bypass_access'] = 0;
+  /* Field: Indexed Node: Participating Organizations */
+  $handler->display->display_options['fields']['field_organizations2']['id'] = 'field_organizations2';
+  $handler->display->display_options['fields']['field_organizations2']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_organizations2']['field'] = 'field_organizations2';
+  $handler->display->display_options['fields']['field_organizations2']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_organizations2']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_organizations2']['bypass_access'] = 0;
   /* Field: Indexed Node: Clusters/Sectors */
   $handler->display->display_options['fields']['field_bundles']['id'] = 'field_bundles';
   $handler->display->display_options['fields']['field_bundles']['table'] = 'search_api_index_default_node_index';
@@ -254,34 +313,173 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_bundles']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_bundles']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_bundles']['bypass_access'] = 0;
-  /* Field: Indexed Node: First name */
-  $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
-  $handler->display->display_options['fields']['field_first_name']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
-  $handler->display->display_options['fields']['field_first_name']['type'] = 'title_linked';
-  $handler->display->display_options['fields']['field_first_name']['settings'] = array(
-    'title_style' => '_none',
-    'title_link' => 'content',
-    'title_class' => '',
-  );
-  /* Field: Indexed Node: Last name */
-  $handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
-  $handler->display->display_options['fields']['field_last_name']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
-  $handler->display->display_options['fields']['field_last_name']['type'] = 'title_linked';
-  $handler->display->display_options['fields']['field_last_name']['settings'] = array(
-    'title_style' => '_none',
-    'title_link' => 'content',
-    'title_class' => '',
-  );
-  /* Field: Indexed Node: Main Email */
-  $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
-  $handler->display->display_options['fields']['field_email']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
-  /* Field: Indexed Node: Phones */
+  /* Field: Indexed Node: Date » Start date */
+  $handler->display->display_options['fields']['field_asst_date_value']['id'] = 'field_asst_date_value';
+  $handler->display->display_options['fields']['field_asst_date_value']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_date_value']['field'] = 'field_asst_date_value';
+  $handler->display->display_options['fields']['field_asst_date_value']['label'] = 'Start date';
+  $handler->display->display_options['fields']['field_asst_date_value']['date_format'] = 'hr_1';
+  $handler->display->display_options['fields']['field_asst_date_value']['link_to_entity'] = 0;
+  /* Field: Indexed Node: Date » End date */
+  $handler->display->display_options['fields']['field_asst_date_value2']['id'] = 'field_asst_date_value2';
+  $handler->display->display_options['fields']['field_asst_date_value2']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_date_value2']['field'] = 'field_asst_date_value2';
+  $handler->display->display_options['fields']['field_asst_date_value2']['label'] = 'End date';
+  $handler->display->display_options['fields']['field_asst_date_value2']['date_format'] = 'hr_1';
+  $handler->display->display_options['fields']['field_asst_date_value2']['link_to_entity'] = 0;
+  /* Field: Indexed Node: Status */
+  $handler->display->display_options['fields']['field_asst_status']['id'] = 'field_asst_status';
+  $handler->display->display_options['fields']['field_asst_status']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_status']['field'] = 'field_asst_status';
+  /* Field: Indexed Node: Collection Method */
+  $handler->display->display_options['fields']['field_asst_collection_method']['id'] = 'field_asst_collection_method';
+  $handler->display->display_options['fields']['field_asst_collection_method']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_collection_method']['field'] = 'field_asst_collection_method';
+  $handler->display->display_options['fields']['field_asst_collection_method']['delta_offset'] = '0';
+  /* Field: Indexed Node: Frequency */
+  $handler->display->display_options['fields']['field_asst_freq']['id'] = 'field_asst_freq';
+  $handler->display->display_options['fields']['field_asst_freq']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_freq']['field'] = 'field_asst_freq';
+  /* Field: Indexed Node: Key findings */
+  $handler->display->display_options['fields']['field_asst_key_findings']['id'] = 'field_asst_key_findings';
+  $handler->display->display_options['fields']['field_asst_key_findings']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_key_findings']['field'] = 'field_asst_key_findings';
+  /* Field: Indexed Node: Methodology */
+  $handler->display->display_options['fields']['field_asst_methodology']['id'] = 'field_asst_methodology';
+  $handler->display->display_options['fields']['field_asst_methodology']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_methodology']['field'] = 'field_asst_methodology';
+  /* Field: Indexed Node: Sample size */
+  $handler->display->display_options['fields']['field_asst_sample_size']['id'] = 'field_asst_sample_size';
+  $handler->display->display_options['fields']['field_asst_sample_size']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_sample_size']['field'] = 'field_asst_sample_size';
+  /* Field: Indexed Node: Level of Representation */
+  $handler->display->display_options['fields']['field_geographic_level']['id'] = 'field_geographic_level';
+  $handler->display->display_options['fields']['field_geographic_level']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_geographic_level']['field'] = 'field_geographic_level';
+  $handler->display->display_options['fields']['field_geographic_level']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_geographic_level']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_geographic_level']['bypass_access'] = 0;
+  /* Field: Indexed Node: Subject/Objective */
+  $handler->display->display_options['fields']['field_asst_subject']['id'] = 'field_asst_subject';
+  $handler->display->display_options['fields']['field_asst_subject']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_subject']['field'] = 'field_asst_subject';
+  /* Field: Indexed Node: Population Types */
+  $handler->display->display_options['fields']['field_population_types']['id'] = 'field_population_types';
+  $handler->display->display_options['fields']['field_population_types']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_population_types']['field'] = 'field_population_types';
+  $handler->display->display_options['fields']['field_population_types']['list']['separator'] = ';';
+  $handler->display->display_options['fields']['field_population_types']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_population_types']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_population_types']['bypass_access'] = 0;
+  /* Field: Indexed Node: Unit of Measurement */
+  $handler->display->display_options['fields']['field_asst_unit']['id'] = 'field_asst_unit';
+  $handler->display->display_options['fields']['field_asst_unit']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_asst_unit']['field'] = 'field_asst_unit';
+  $handler->display->display_options['fields']['field_asst_unit']['delta_offset'] = '0';
+  /* Field: Field collection item: Accessibility */
+  $handler->display->display_options['fields']['field_asst_accessibility_2']['id'] = 'field_asst_accessibility_2';
+  $handler->display->display_options['fields']['field_asst_accessibility_2']['table'] = 'entity_field_collection_item';
+  $handler->display->display_options['fields']['field_asst_accessibility_2']['field'] = 'field_asst_accessibility';
+  $handler->display->display_options['fields']['field_asst_accessibility_2']['relationship'] = 'field_asst_report';
+  $handler->display->display_options['fields']['field_asst_accessibility_2']['label'] = 'Report Accessibility';
+  /* Field: Field collection item: File */
+  $handler->display->display_options['fields']['field_asst_file_2']['id'] = 'field_asst_file_2';
+  $handler->display->display_options['fields']['field_asst_file_2']['table'] = 'entity_field_collection_item';
+  $handler->display->display_options['fields']['field_asst_file_2']['field'] = 'field_asst_file';
+  $handler->display->display_options['fields']['field_asst_file_2']['relationship'] = 'field_asst_report';
+  $handler->display->display_options['fields']['field_asst_file_2']['label'] = 'Report File';
+  $handler->display->display_options['fields']['field_asst_file_2']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_asst_file_2']['type'] = 'file_url_plain';
+  /* Field: Field collection item: URL */
+  $handler->display->display_options['fields']['field_asst_url_2']['id'] = 'field_asst_url_2';
+  $handler->display->display_options['fields']['field_asst_url_2']['table'] = 'entity_field_collection_item';
+  $handler->display->display_options['fields']['field_asst_url_2']['field'] = 'field_asst_url';
+  $handler->display->display_options['fields']['field_asst_url_2']['relationship'] = 'field_asst_report';
+  $handler->display->display_options['fields']['field_asst_url_2']['label'] = 'Report URL';
+  $handler->display->display_options['fields']['field_asst_url_2']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_asst_url_2']['type'] = 'link_absolute';
+  /* Field: Field collection item: Instructions */
+  $handler->display->display_options['fields']['field_asst_instructions_2']['id'] = 'field_asst_instructions_2';
+  $handler->display->display_options['fields']['field_asst_instructions_2']['table'] = 'entity_field_collection_item';
+  $handler->display->display_options['fields']['field_asst_instructions_2']['field'] = 'field_asst_instructions';
+  $handler->display->display_options['fields']['field_asst_instructions_2']['relationship'] = 'field_asst_report';
+  $handler->display->display_options['fields']['field_asst_instructions_2']['label'] = 'Report Instructions';
+  /* Field: Field collection item: Accessibility */
+  $handler->display->display_options['fields']['field_asst_accessibility_1']['id'] = 'field_asst_accessibility_1';
+  $handler->display->display_options['fields']['field_asst_accessibility_1']['table'] = 'entity_field_collection_item';
+  $handler->display->display_options['fields']['field_asst_accessibility_1']['field'] = 'field_asst_accessibility';
+  $handler->display->display_options['fields']['field_asst_accessibility_1']['relationship'] = 'field_asst_questionnaire';
+  $handler->display->display_options['fields']['field_asst_accessibility_1']['label'] = 'Questionnaire Accessibility';
+  /* Field: Field collection item: File */
+  $handler->display->display_options['fields']['field_asst_file_1']['id'] = 'field_asst_file_1';
+  $handler->display->display_options['fields']['field_asst_file_1']['table'] = 'entity_field_collection_item';
+  $handler->display->display_options['fields']['field_asst_file_1']['field'] = 'field_asst_file';
+  $handler->display->display_options['fields']['field_asst_file_1']['relationship'] = 'field_asst_questionnaire';
+  $handler->display->display_options['fields']['field_asst_file_1']['label'] = 'Questionnaire File';
+  $handler->display->display_options['fields']['field_asst_file_1']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_asst_file_1']['type'] = 'file_url_plain';
+  /* Field: Field collection item: URL */
+  $handler->display->display_options['fields']['field_asst_url_1']['id'] = 'field_asst_url_1';
+  $handler->display->display_options['fields']['field_asst_url_1']['table'] = 'entity_field_collection_item';
+  $handler->display->display_options['fields']['field_asst_url_1']['field'] = 'field_asst_url';
+  $handler->display->display_options['fields']['field_asst_url_1']['relationship'] = 'field_asst_questionnaire';
+  $handler->display->display_options['fields']['field_asst_url_1']['label'] = 'Questionnaire URL';
+  $handler->display->display_options['fields']['field_asst_url_1']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_asst_url_1']['type'] = 'link_absolute';
+  /* Field: Field collection item: Instructions */
+  $handler->display->display_options['fields']['field_asst_instructions_1']['id'] = 'field_asst_instructions_1';
+  $handler->display->display_options['fields']['field_asst_instructions_1']['table'] = 'entity_field_collection_item';
+  $handler->display->display_options['fields']['field_asst_instructions_1']['field'] = 'field_asst_instructions';
+  $handler->display->display_options['fields']['field_asst_instructions_1']['relationship'] = 'field_asst_questionnaire';
+  $handler->display->display_options['fields']['field_asst_instructions_1']['label'] = 'Questionnaire Instructions';
+  /* Field: Field collection item: Accessibility */
+  $handler->display->display_options['fields']['field_asst_accessibility']['id'] = 'field_asst_accessibility';
+  $handler->display->display_options['fields']['field_asst_accessibility']['table'] = 'entity_field_collection_item';
+  $handler->display->display_options['fields']['field_asst_accessibility']['field'] = 'field_asst_accessibility';
+  $handler->display->display_options['fields']['field_asst_accessibility']['relationship'] = 'field_asst_data';
+  /* Field: Field collection item: File */
+  $handler->display->display_options['fields']['field_asst_file']['id'] = 'field_asst_file';
+  $handler->display->display_options['fields']['field_asst_file']['table'] = 'entity_field_collection_item';
+  $handler->display->display_options['fields']['field_asst_file']['field'] = 'field_asst_file';
+  $handler->display->display_options['fields']['field_asst_file']['relationship'] = 'field_asst_data';
+  $handler->display->display_options['fields']['field_asst_file']['label'] = 'Data File';
+  $handler->display->display_options['fields']['field_asst_file']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_asst_file']['type'] = 'file_url_plain';
+  /* Field: Field collection item: URL */
+  $handler->display->display_options['fields']['field_asst_url']['id'] = 'field_asst_url';
+  $handler->display->display_options['fields']['field_asst_url']['table'] = 'entity_field_collection_item';
+  $handler->display->display_options['fields']['field_asst_url']['field'] = 'field_asst_url';
+  $handler->display->display_options['fields']['field_asst_url']['relationship'] = 'field_asst_data';
+  $handler->display->display_options['fields']['field_asst_url']['label'] = 'Data URL';
+  $handler->display->display_options['fields']['field_asst_url']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_asst_url']['type'] = 'link_absolute';
+  /* Field: Field collection item: Instructions */
+  $handler->display->display_options['fields']['field_asst_instructions']['id'] = 'field_asst_instructions';
+  $handler->display->display_options['fields']['field_asst_instructions']['table'] = 'entity_field_collection_item';
+  $handler->display->display_options['fields']['field_asst_instructions']['field'] = 'field_asst_instructions';
+  $handler->display->display_options['fields']['field_asst_instructions']['relationship'] = 'field_asst_data';
+  $handler->display->display_options['fields']['field_asst_instructions']['label'] = 'Data Instructions';
+  /* Field: Field collection item: User */
+  $handler->display->display_options['fields']['field_user']['id'] = 'field_user';
+  $handler->display->display_options['fields']['field_user']['table'] = 'entity_field_collection_item';
+  $handler->display->display_options['fields']['field_user']['field'] = 'field_user';
+  $handler->display->display_options['fields']['field_user']['relationship'] = 'field_users_ref';
+  $handler->display->display_options['fields']['field_user']['label'] = 'Contact Profile';
+  $handler->display->display_options['fields']['field_user']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_user']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_user']['bypass_access'] = 0;
+  /* Field: Field collection item: Name */
+  $handler->display->display_options['fields']['field_users_ref_name']['id'] = 'field_users_ref_name';
+  $handler->display->display_options['fields']['field_users_ref_name']['table'] = 'entity_field_collection_item';
+  $handler->display->display_options['fields']['field_users_ref_name']['field'] = 'field_users_ref_name';
+  $handler->display->display_options['fields']['field_users_ref_name']['relationship'] = 'field_users_ref';
+  $handler->display->display_options['fields']['field_users_ref_name']['label'] = 'Contact Name';
+  /* Field: Field collection item: Phones */
   $handler->display->display_options['fields']['field_phones']['id'] = 'field_phones';
-  $handler->display->display_options['fields']['field_phones']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_phones']['table'] = 'entity_field_collection_item';
   $handler->display->display_options['fields']['field_phones']['field'] = 'field_phones';
+  $handler->display->display_options['fields']['field_phones']['relationship'] = 'field_users_ref';
+  $handler->display->display_options['fields']['field_phones']['label'] = 'Contact Phones';
   $handler->display->display_options['fields']['field_phones']['click_sort_column'] = 'numbertype';
   $handler->display->display_options['fields']['field_phones']['settings'] = array(
     'components' => array(
@@ -297,67 +495,19 @@ function hr_assessments_views_default_views() {
   );
   $handler->display->display_options['fields']['field_phones']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_phones']['separator'] = ';';
-  /* Field: Indexed Node: Leading/Coordinating Organizations */
-  $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
-  $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
-  $handler->display->display_options['fields']['field_organizations']['list']['separator'] = ';';
-  $handler->display->display_options['fields']['field_organizations']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_organizations']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_organizations']['bypass_access'] = 0;
-  /* Field: Indexed Node: Job Title */
-  $handler->display->display_options['fields']['field_job_title']['id'] = 'field_job_title';
-  $handler->display->display_options['fields']['field_job_title']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_job_title']['field'] = 'field_job_title';
-  $handler->display->display_options['fields']['field_job_title']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_job_title']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_job_title']['bypass_access'] = 0;
-  /* Field: Indexed Node: Location */
-  $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
-  $handler->display->display_options['fields']['field_location']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
-  $handler->display->display_options['fields']['field_location']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_location']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_location']['bypass_access'] = 0;
-  /* Field: Indexed Node: Coordination hubs */
-  $handler->display->display_options['fields']['field_coordination_hubs']['id'] = 'field_coordination_hubs';
-  $handler->display->display_options['fields']['field_coordination_hubs']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_coordination_hubs']['field'] = 'field_coordination_hubs';
-  $handler->display->display_options['fields']['field_coordination_hubs']['list']['separator'] = ';';
-  $handler->display->display_options['fields']['field_coordination_hubs']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_coordination_hubs']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_coordination_hubs']['bypass_access'] = 0;
-  /* Field: Indexed Node: Funding methods */
-  $handler->display->display_options['fields']['field_funding_methods']['id'] = 'field_funding_methods';
-  $handler->display->display_options['fields']['field_funding_methods']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_funding_methods']['field'] = 'field_funding_methods';
-  $handler->display->display_options['fields']['field_funding_methods']['label'] = 'Fundings';
-  $handler->display->display_options['fields']['field_funding_methods']['list']['separator'] = ';';
-  $handler->display->display_options['fields']['field_funding_methods']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_funding_methods']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_funding_methods']['bypass_access'] = 0;
-  /* Field: Indexed Node: Themes */
-  $handler->display->display_options['fields']['field_themes']['id'] = 'field_themes';
-  $handler->display->display_options['fields']['field_themes']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_themes']['field'] = 'field_themes';
-  $handler->display->display_options['fields']['field_themes']['list']['separator'] = ';';
-  $handler->display->display_options['fields']['field_themes']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_themes']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_themes']['bypass_access'] = 0;
-  /* Field: Indexed Node: Emergencies */
-  $handler->display->display_options['fields']['field_disasters']['id'] = 'field_disasters';
-  $handler->display->display_options['fields']['field_disasters']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_disasters']['field'] = 'field_disasters';
-  $handler->display->display_options['fields']['field_disasters']['list']['separator'] = ';';
-  $handler->display->display_options['fields']['field_disasters']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_disasters']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_disasters']['bypass_access'] = 0;
+  /* Field: Field collection item: Cluster coordinator Email */
+  $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
+  $handler->display->display_options['fields']['field_email']['table'] = 'entity_field_collection_item';
+  $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
+  $handler->display->display_options['fields']['field_email']['relationship'] = 'field_users_ref';
+  $handler->display->display_options['fields']['field_email']['label'] = 'Contact Email';
+  $handler->display->display_options['fields']['field_email']['type'] = 'email_plain';
   $handler->display->display_options['path'] = 'node/%/assessments/csv';
   $handler->display->display_options['displays'] = array(
+    'master' => 'master',
+    'list' => 'list',
+    'table' => 'table',
     'default' => 0,
-    'master' => 0,
-    'list' => 0,
-    'table' => 0,
     'map' => 0,
   );
   $handler->display->display_options['segment_size'] = '100';
@@ -510,17 +660,40 @@ function hr_assessments_views_default_views() {
     t('List'),
     t('Table'),
     t('CSV'),
-    t('First name'),
-    t('Last name'),
-    t('Main Email'),
-    t('Phones'),
-    t('Leading/Coordinating Organizations'),
-    t('Job Title'),
+    t('Assessment Data'),
+    t('Assessment Questionnaire'),
+    t('Assessment Report'),
+    t('Contact(s)'),
     t('Location'),
-    t('Coordination hubs'),
-    t('Fundings'),
-    t('Themes'),
-    t('Emergencies'),
+    t('Other location'),
+    t('Leading Organizations'),
+    t('Start date'),
+    t('End date'),
+    t('Collection Method'),
+    t('Frequency'),
+    t('Key findings'),
+    t('Methodology'),
+    t('Sample size'),
+    t('Level of Representation'),
+    t('Subject/Objective'),
+    t('Population Types'),
+    t('Unit of Measurement'),
+    t('Report Accessibility'),
+    t('Report File'),
+    t('Report URL'),
+    t('Report Instructions'),
+    t('Questionnaire Accessibility'),
+    t('Questionnaire File'),
+    t('Questionnaire URL'),
+    t('Questionnaire Instructions'),
+    t('Accessibility'),
+    t('Data File'),
+    t('Data URL'),
+    t('Data Instructions'),
+    t('Contact Profile'),
+    t('Contact Name'),
+    t('Contact Phones'),
+    t('Contact Email'),
     t('Map data'),
     t('.'),
     t('Map'),

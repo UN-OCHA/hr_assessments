@@ -1870,7 +1870,7 @@ function hr_assessments_field_default_field_instances() {
     'widget' => array(
       'module' => 'options',
       'settings' => array(
-        'apply_chosen' => '',
+        'apply_chosen' => 1,
       ),
       'type' => 'options_select',
       'weight' => 2,
@@ -2164,7 +2164,7 @@ function hr_assessments_field_default_field_instances() {
     'widget' => array(
       'module' => 'options',
       'settings' => array(
-        'apply_chosen' => '',
+        'apply_chosen' => 1,
       ),
       'type' => 'options_select',
       'weight' => 24,
