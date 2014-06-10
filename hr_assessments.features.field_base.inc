@@ -33,6 +33,7 @@ function hr_assessments_field_default_field_bases() {
         'admin3' => 'Admin 3',
         'admin4' => 'Admin 4',
         'admin5' => 'Admin 5',
+        'other' => 'Other',
       ),
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,
