@@ -54,7 +54,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_locations']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_locations']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_locations']['bypass_access'] = 0;
-  /* Field: Indexed Node: Leading/Coordinating Organizations */
+  /* Field: Indexed Node: Lead Agencies */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -119,7 +119,12 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_asst_data']['display'] = 'view';
   $handler->display->display_options['fields']['field_asst_data']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_asst_data']['bypass_access'] = 0;
-  /* Contextual filter: Indexed Node: Space(s) */
+  /* Sort criterion: Date: Start date (indexed) */
+  $handler->display->display_options['sorts']['field_asst_date_value']['id'] = 'field_asst_date_value';
+  $handler->display->display_options['sorts']['field_asst_date_value']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['sorts']['field_asst_date_value']['field'] = 'field_asst_date_value';
+  $handler->display->display_options['sorts']['field_asst_date_value']['order'] = 'DESC';
+  /* Contextual filter: Indexed Node: Groups audience */
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['arguments']['og_group_ref']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['og_group_ref']['field'] = 'og_group_ref';
@@ -289,7 +294,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_asst_other_location']['id'] = 'field_asst_other_location';
   $handler->display->display_options['fields']['field_asst_other_location']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_asst_other_location']['field'] = 'field_asst_other_location';
-  /* Field: Indexed Node: Leading/Coordinating Organizations */
+  /* Field: Indexed Node: Lead Agencies */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -313,14 +318,14 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_bundles']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_bundles']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_bundles']['bypass_access'] = 0;
-  /* Field: Indexed Node: Date » Start date */
+  /* Field: Date: Start date (indexed) */
   $handler->display->display_options['fields']['field_asst_date_value']['id'] = 'field_asst_date_value';
   $handler->display->display_options['fields']['field_asst_date_value']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_asst_date_value']['field'] = 'field_asst_date_value';
   $handler->display->display_options['fields']['field_asst_date_value']['label'] = 'Start date';
   $handler->display->display_options['fields']['field_asst_date_value']['date_format'] = 'hr_1';
   $handler->display->display_options['fields']['field_asst_date_value']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Date » End date */
+  /* Field: Date: End date (indexed) */
   $handler->display->display_options['fields']['field_asst_date_value2']['id'] = 'field_asst_date_value2';
   $handler->display->display_options['fields']['field_asst_date_value2']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_asst_date_value2']['field'] = 'field_asst_date_value2';
@@ -495,7 +500,7 @@ function hr_assessments_views_default_views() {
   );
   $handler->display->display_options['fields']['field_phones']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_phones']['separator'] = ';';
-  /* Field: Field collection item: Cluster coordinator Email */
+  /* Field: Field collection item: Email */
   $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['table'] = 'entity_field_collection_item';
   $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
@@ -561,7 +566,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Leading/Coordinating Organizations */
+  /* Field: Indexed Node: Lead Agencies */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -572,7 +577,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_organizations']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_organizations']['bypass_access'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Indexed Node: Space(s) */
+  /* Contextual filter: Indexed Node: Groups audience */
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['arguments']['og_group_ref']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['og_group_ref']['field'] = 'og_group_ref';
@@ -731,7 +736,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Contextual filter: Content: Groups audience (og_group_ref) */
+  /* Contextual filter: Content: Space(s) (og_group_ref) */
   $handler->display->display_options['arguments']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['table'] = 'og_membership';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';
