@@ -216,6 +216,7 @@ features[variable][] = panelizer_node:hr_assessment_allowed_layouts_default
 features[variable][] = panelizer_node:hr_assessment_default
 features[variable][] = pathauto_node_hr_assessment_pattern
 features[variable][] = pathauto_node_hr_geographic_level_pattern
+features[variable][] = publishcontent_hr_assessment
 features[views_view][] = hr_assessments
 features[views_view][] = hr_geographic_levels
 features_exclude[dependencies][feeds] = feeds

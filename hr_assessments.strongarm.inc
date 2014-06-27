@@ -276,5 +276,12 @@ function hr_assessments_strongarm() {
   $strongarm->value = '[node:og-group-ref:0:url:path]/geographic-level/[node:title]';
   $export['pathauto_node_hr_geographic_level_pattern'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'publishcontent_hr_assessment';
+  $strongarm->value = 1;
+  $export['publishcontent_hr_assessment'] = $strongarm;
+
   return $export;
 }
