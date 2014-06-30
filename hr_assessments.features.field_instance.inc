@@ -2373,8 +2373,8 @@ function hr_assessments_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'og_group_ref',
-    'label' => 'Groups audience',
-    'required' => 0,
+    'label' => 'Space(s)',
+    'required' => 1,
     'settings' => array(
       'behaviors' => array(
         'og_widget' => array(
