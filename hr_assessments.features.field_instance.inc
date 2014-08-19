@@ -76,7 +76,7 @@ function hr_assessments_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'file',
       'settings' => array(
         'allowed_schemes' => array(
           'private' => 0,
@@ -90,6 +90,7 @@ function hr_assessments_field_default_field_instances() {
           'image' => 0,
           'video' => 0,
         ),
+        'progress_indicator' => 'throbber',
         'browser_plugins' => array(
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
@@ -98,7 +99,7 @@ function hr_assessments_field_default_field_instances() {
           'youtube' => 0,
         ),
       ),
-      'type' => 'media_generic',
+      'type' => 'file_generic',
       'weight' => 34,
     ),
   );
@@ -131,7 +132,7 @@ function hr_assessments_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'file',
       'settings' => array(
         'allowed_schemes' => array(
           'private' => 'private',
@@ -145,6 +146,7 @@ function hr_assessments_field_default_field_instances() {
           'image' => 0,
           'video' => 0,
         ),
+        'progress_indicator' => 'throbber',
         'browser_plugins' => array(
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
@@ -153,7 +155,7 @@ function hr_assessments_field_default_field_instances() {
           'youtube' => 0,
         ),
       ),
-      'type' => 'media_generic',
+      'type' => 'file_generic',
       'weight' => 38,
     ),
   );
@@ -369,7 +371,7 @@ function hr_assessments_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'file',
       'settings' => array(
         'allowed_schemes' => array(
           'private' => 0,
@@ -383,6 +385,7 @@ function hr_assessments_field_default_field_instances() {
           'image' => 0,
           'video' => 0,
         ),
+        'progress_indicator' => 'throbber',
         'browser_plugins' => array(
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
@@ -391,7 +394,7 @@ function hr_assessments_field_default_field_instances() {
           'youtube' => 0,
         ),
       ),
-      'type' => 'media_generic',
+      'type' => 'file_generic',
       'weight' => 32,
     ),
   );
@@ -424,7 +427,7 @@ function hr_assessments_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'file',
       'settings' => array(
         'allowed_schemes' => array(
           'private' => 'private',
@@ -438,6 +441,7 @@ function hr_assessments_field_default_field_instances() {
           'image' => 0,
           'video' => 0,
         ),
+        'progress_indicator' => 'throbber',
         'browser_plugins' => array(
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
@@ -446,7 +450,7 @@ function hr_assessments_field_default_field_instances() {
           'youtube' => 0,
         ),
       ),
-      'type' => 'media_generic',
+      'type' => 'file_generic',
       'weight' => 34,
     ),
   );
@@ -662,7 +666,7 @@ function hr_assessments_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'file',
       'settings' => array(
         'allowed_schemes' => array(
           'private' => 0,
@@ -676,6 +680,7 @@ function hr_assessments_field_default_field_instances() {
           'image' => 0,
           'video' => 0,
         ),
+        'progress_indicator' => 'throbber',
         'browser_plugins' => array(
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
@@ -684,7 +689,7 @@ function hr_assessments_field_default_field_instances() {
           'youtube' => 0,
         ),
       ),
-      'type' => 'media_generic',
+      'type' => 'file_generic',
       'weight' => 34,
     ),
   );
@@ -717,7 +722,7 @@ function hr_assessments_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'file',
       'settings' => array(
         'allowed_schemes' => array(
           'private' => 'private',
@@ -731,6 +736,7 @@ function hr_assessments_field_default_field_instances() {
           'image' => 0,
           'video' => 0,
         ),
+        'progress_indicator' => 'throbber',
         'browser_plugins' => array(
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
@@ -739,7 +745,7 @@ function hr_assessments_field_default_field_instances() {
           'youtube' => 0,
         ),
       ),
-      'type' => 'media_generic',
+      'type' => 'file_generic',
       'weight' => 38,
     ),
   );
