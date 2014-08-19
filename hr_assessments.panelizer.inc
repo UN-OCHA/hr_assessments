@@ -1004,6 +1004,31 @@ function hr_assessments_panelizer_defaults() {
     $pane->uuid = '6f55fa71-87b9-4a3d-9c09-e87fda4238d8';
     $display->content['new-6f55fa71-87b9-4a3d-9c09-e87fda4238d8'] = $pane;
     $display->panels['contentmain'][3] = 'new-6f55fa71-87b9-4a3d-9c09-e87fda4238d8';
+    $pane = new stdClass();
+    $pane->pid = 'new-9f55c978-4e1c-434c-b470-f9e8382c811e';
+    $pane->panel = 'contentmain';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'hr_node_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'panelizer',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $pane->uuid = '9f55c978-4e1c-434c-b470-f9e8382c811e';
+    $display->content['new-9f55c978-4e1c-434c-b470-f9e8382c811e'] = $pane;
+    $display->panels['contentmain'][4] = 'new-9f55c978-4e1c-434c-b470-f9e8382c811e';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;

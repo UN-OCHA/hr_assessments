@@ -2527,7 +2527,6 @@ function hr_assessments_field_default_field_instances() {
   t('File (Restricted)');
   t('Frequency');
   t('Group content visibility');
-  t('Groups audience');
   t('Instructions');
   t('Key findings');
   t('Leading/Coordinating Organizations');
