@@ -51,6 +51,7 @@ function hr_assessments_field_default_field_instances() {
   // Exported field_instance: 'field_collection_item-field_asst_data-field_asst_file'
   $field_instances['field_collection_item-field_asst_data-field_asst_file'] = array(
     'bundle' => 'field_asst_data',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -90,7 +91,6 @@ function hr_assessments_field_default_field_instances() {
           'image' => 0,
           'video' => 0,
         ),
-        'progress_indicator' => 'throbber',
         'browser_plugins' => array(
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
@@ -98,6 +98,7 @@ function hr_assessments_field_default_field_instances() {
           'upload' => 0,
           'youtube' => 0,
         ),
+        'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
       'weight' => 34,
@@ -107,6 +108,7 @@ function hr_assessments_field_default_field_instances() {
   // Exported field_instance: 'field_collection_item-field_asst_data-field_asst_file_rest'
   $field_instances['field_collection_item-field_asst_data-field_asst_file_rest'] = array(
     'bundle' => 'field_asst_data',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -146,7 +148,6 @@ function hr_assessments_field_default_field_instances() {
           'image' => 0,
           'video' => 0,
         ),
-        'progress_indicator' => 'throbber',
         'browser_plugins' => array(
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
@@ -154,6 +155,7 @@ function hr_assessments_field_default_field_instances() {
           'upload' => 0,
           'youtube' => 0,
         ),
+        'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
       'weight' => 38,
@@ -346,6 +348,7 @@ function hr_assessments_field_default_field_instances() {
   // Exported field_instance: 'field_collection_item-field_asst_questionnaire-field_asst_file'
   $field_instances['field_collection_item-field_asst_questionnaire-field_asst_file'] = array(
     'bundle' => 'field_asst_questionnaire',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -385,7 +388,6 @@ function hr_assessments_field_default_field_instances() {
           'image' => 0,
           'video' => 0,
         ),
-        'progress_indicator' => 'throbber',
         'browser_plugins' => array(
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
@@ -393,6 +395,7 @@ function hr_assessments_field_default_field_instances() {
           'upload' => 0,
           'youtube' => 0,
         ),
+        'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
       'weight' => 32,
@@ -402,6 +405,7 @@ function hr_assessments_field_default_field_instances() {
   // Exported field_instance: 'field_collection_item-field_asst_questionnaire-field_asst_file_rest'
   $field_instances['field_collection_item-field_asst_questionnaire-field_asst_file_rest'] = array(
     'bundle' => 'field_asst_questionnaire',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -441,7 +445,6 @@ function hr_assessments_field_default_field_instances() {
           'image' => 0,
           'video' => 0,
         ),
-        'progress_indicator' => 'throbber',
         'browser_plugins' => array(
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
@@ -449,6 +452,7 @@ function hr_assessments_field_default_field_instances() {
           'upload' => 0,
           'youtube' => 0,
         ),
+        'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
       'weight' => 34,
@@ -641,6 +645,7 @@ function hr_assessments_field_default_field_instances() {
   // Exported field_instance: 'field_collection_item-field_asst_report-field_asst_file'
   $field_instances['field_collection_item-field_asst_report-field_asst_file'] = array(
     'bundle' => 'field_asst_report',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -680,7 +685,6 @@ function hr_assessments_field_default_field_instances() {
           'image' => 0,
           'video' => 0,
         ),
-        'progress_indicator' => 'throbber',
         'browser_plugins' => array(
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
@@ -688,6 +692,7 @@ function hr_assessments_field_default_field_instances() {
           'upload' => 0,
           'youtube' => 0,
         ),
+        'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
       'weight' => 34,
@@ -697,6 +702,7 @@ function hr_assessments_field_default_field_instances() {
   // Exported field_instance: 'field_collection_item-field_asst_report-field_asst_file_rest'
   $field_instances['field_collection_item-field_asst_report-field_asst_file_rest'] = array(
     'bundle' => 'field_asst_report',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -736,7 +742,6 @@ function hr_assessments_field_default_field_instances() {
           'image' => 0,
           'video' => 0,
         ),
-        'progress_indicator' => 'throbber',
         'browser_plugins' => array(
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
@@ -744,6 +749,7 @@ function hr_assessments_field_default_field_instances() {
           'upload' => 0,
           'youtube' => 0,
         ),
+        'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
       'weight' => 38,
