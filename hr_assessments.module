@@ -71,3 +71,24 @@ function hr_assessments_entity_info_alter(&$entity_info) {
   );
 }
 
+/**
+ * Implements hook_search_api_views_query_alter()
+ *
+ * Makes the assessments view available for disasters
+ */
+function hr_assessments_search_api_views_query_alter(&$view, &$query) {
+  if ($view->name == 'hr_assessments') {
+    foreach ($query->where as &$condition_group) {
+      foreach ($condition_group['conditions'] as &$condition) {
+        if (reset($condition) == 'og_group_ref') {
+          $nid = $condition[1];
+          $node = node_load($nid);
+          if ($node->type == 'hr_disaster') {
+            $condition = array('field_disasters', $nid, '=');
+          }
+        }
+      }
+    }
+  }
+}
+
