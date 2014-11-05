@@ -1960,6 +1960,7 @@ function hr_assessments_field_default_field_instances() {
   $field_instances['node-hr_assessment-field_organizations2'] = array(
     'bundle' => 'hr_assessment',
     'default_value' => NULL,
+    'default_value_function' => '',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1988,12 +1989,21 @@ function hr_assessments_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_organizations2',
     'label' => 'Participating Organizations',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+        'taxonomy-index' => array(
+          'status' => TRUE,
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'options',
       'settings' => array(
         'apply_chosen' => 1,

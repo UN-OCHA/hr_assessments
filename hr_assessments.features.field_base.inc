@@ -724,10 +724,13 @@ function hr_assessments_field_default_field_bases() {
   // Exported field_base: 'field_organizations2'
   $field_bases['field_organizations2'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_organizations2',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(
       'taxonomy_term_data' => array(
         'columns' => array(
@@ -758,6 +761,7 @@ function hr_assessments_field_default_field_bases() {
           'view_name' => 'hr_organizations',
         ),
       ),
+      'profile2_private' => FALSE,
       'target_type' => 'taxonomy_term',
     ),
     'translatable' => 0,
