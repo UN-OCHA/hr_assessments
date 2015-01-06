@@ -34,34 +34,46 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
     $public_fields['bundles'] = array(
       'property' => 'field_bundles',
       'resource' => array(
-        'hr_bundle' => 'bundles',
+        'hr_bundle' => array(
+          'name' => 'bundles',
+          'full_view' => FALSE,
+        ),
       ),
     );
 
     $public_fields['organizations'] = array(
       'property' => 'field_organizations',
       'resource' => array(
-        'hr_organization' => 'organizations',
+        'hr_organization' => array(
+          'name' => 'organizations',
+          'full_view' => FALSE,
+        ),
       ),
     );
 
     $public_fields['participating_organizations'] = array(
       'property' => 'field_organizations2',
       'resource' => array(
-        'hr_organization' => 'organizations',
+        'hr_organization' => array(
+          'name' => 'organizations',
+          'full_view' => FALSE,
+        ),
       ),
     );
 
     $public_fields['locations'] = array(
       'property' => 'field_locations',
       'resource' => array(
-        'hr_location' => 'locations',
+        'hr_location' => array(
+          'name' => 'locations',
+          'full_view' => FALSE,
+        ),
       ),
     );
 
     $public_fields['other_location'] = array(
       'property' => 'field_asst_other_location',
-      'subproperty' => 'value',
+      'sub_property' => 'value',
     );
 
     /*$public_fields['address'] = array(
