@@ -73,7 +73,6 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
 
     $public_fields['other_location'] = array(
       'property' => 'field_asst_other_location',
-      'sub_property' => 'value',
     );
 
     /*$public_fields['address'] = array(
