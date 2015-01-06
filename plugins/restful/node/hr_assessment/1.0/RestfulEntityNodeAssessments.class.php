@@ -34,11 +34,9 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
     $public_fields['bundles'] = array(
       'property' => 'field_bundles',
       'resource' => array(
-        'hr_bundle' => array(
-          'name' => 'bundles',
-          'full_view' => FALSE,
-        ),
+        'hr_bundle' => 'bundles',
       ),
+      'process_callbacks' => array(array($this, 'getEntity')),
     );
 
     $public_fields['organizations'] = array(
@@ -95,6 +93,20 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
     );*/
 
     return $public_fields;
+  }
+
+  protected function getEntity($wrapper) {
+    foreach ($wrapper as &$item) {
+      $array_item = (array)$item;
+      $properties = array_keys($array_item);
+      foreach ($properties as $property) {
+        if (!in_array($property, array('id', 'label', 'self'))) {
+          unset($array_item[$property]);
+        }
+      }
+      $item = (object)$array_item;
+    }
+    return $wrapper;
   }
 
 }
