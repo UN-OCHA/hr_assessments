@@ -67,6 +67,30 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
       'property' => 'field_asst_other_location',
     );
 
+    $public_fields['subject'] = array(
+      'property' => 'field_asst_subject',
+    );
+
+    $public_fields['methodology'] = array(
+      'property' => 'field_asst_methodology',
+    );
+
+    $public_fields['key_findings'] = array(
+      'property' => 'field_asst_key_findings',
+    );
+
+    $public_fields['unit_measurement'] = array(
+      'property' => 'field_asst_unit',
+    );
+
+    $public_fields['collection_method'] = array(
+      'property' => 'field_asst_collection_method',
+    );
+
+    $public_fields['sample_size'] = array(
+      'property' => 'field_asst_sample_size',
+    );
+
     /*$public_fields['address'] = array(
       'property' => 'field_address',
     );
