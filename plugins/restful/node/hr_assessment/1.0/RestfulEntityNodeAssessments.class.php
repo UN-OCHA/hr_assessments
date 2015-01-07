@@ -91,9 +91,10 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
       'property' => 'field_asst_sample_size',
     );
 
-    /*$public_fields['geographic_level'] = array(
+    $public_fields['geographic_level'] = array(
       'property' => 'field_geographic_level',
-    );*/
+      'sub_property' => 'field_admin_level',
+    );
 
     $public_fields['population_types'] = array(
       'property' => 'field_population_types',
