@@ -125,6 +125,7 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
 
     $public_fields['disasters'] = array(
       'property' => 'field_disasters',
+      'process_callbacks' => array(array($this, 'getDisasters')),
     );
 
     $public_fields['operation'] = array(
@@ -169,6 +170,22 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
       unset($value['date_type']);
     }
     return $value;
+  }
+
+  protected function getDisasters($values) {
+    $return = array();
+    if (!empty($values)) {
+      foreach ($values as $value) {
+        $tmp = new stdClass();
+        $tmp->glide = $value->field_glide_number[LANGUAGE_NONE][0]['value'];
+        $tmp->label = $value->title;
+        if (!empty($value->field_reliefweb_id)) {
+          $tmp->self = 'http://api.reliefweb.int/v1/disasters/'.$value->field_reliefweb_id[LANGUAGE_NONE][0]['value'];
+        }
+        $return[] = $tmp;
+      }
+    }
+    return $return;
   }
 
 }
