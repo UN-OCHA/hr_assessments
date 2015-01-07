@@ -91,9 +91,9 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
       'property' => 'field_asst_sample_size',
     );
 
-    $public_fields['geographic_level'] = array(
+    /*$public_fields['geographic_level'] = array(
       'property' => 'field_geographic_level',
-    );
+    );*/
 
     $public_fields['population_types'] = array(
       'property' => 'field_population_types',
@@ -104,6 +104,7 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
 
     $public_fields['date'] = array(
       'property' => 'field_asst_date',
+      'process_callbacks' => array(array($this, 'formatDate')),
     );
 
     $public_fields['frequency'] = array(
@@ -119,6 +120,7 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
       'resource' => array(
         'hr_operation' => 'operations',
       ),
+      'process_callbacks' => array(array($this, 'getEntity')),
     );
 
     return $public_fields;
@@ -136,6 +138,25 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
       $item = (object)$array_item;
     }
     return $wrapper;
+  }
+
+  protected function formatDate($value) {
+    if (isset($value['value'])) {
+      $value['from'] = $value['value'];
+      unset($value['value']);
+    }
+    if (isset($value['value2'])) {
+      $value['to'] = $value['value2'];
+      unset($value['value2']);
+    }
+    if (isset($value['timezone_db'])) {
+      $value['timezone'] = $value['timezone_db'];
+      unset($value['timezone_db']);
+    }
+    if (isset($value['date_type'])) {
+      unset($value['date_type']);
+    }
+    return $value;
   }
 
 }
