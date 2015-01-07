@@ -116,6 +116,17 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
       'property' => 'field_asst_status',
     );
 
+    $public_fields['themes'] = array(
+      'property' => 'field_themes',
+      'resource' => array(
+        'hr_theme' => 'themes',
+      ),
+    );
+
+    $public_fields['disasters'] = array(
+      'property' => 'field_disasters',
+    );
+
     $public_fields['operation'] = array(
       'property' => 'og_group_ref',
       'resource' => array(
