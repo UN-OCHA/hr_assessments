@@ -91,16 +91,27 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
       'property' => 'field_asst_sample_size',
     );
 
-    /*$public_fields['address'] = array(
-      'property' => 'field_address',
+    $public_fields['geographic_level'] = array(
+      'property' => 'field_geographic_level',
     );
 
-    $public_fields['phones'] = array(
-      'property' => 'field_phones',
+    $public_fields['population_types'] = array(
+      'property' => 'field_population_types',
+      'resource' => array(
+        'hr_population_type' => 'population_types',
+      ),
     );
 
-    $public_fields['email'] = array(
-      'property' => 'field_email',
+    $public_fields['date'] = array(
+      'property' => 'field_asst_date',
+    );
+
+    $public_fields['frequency'] = array(
+      'property' => 'field_asst_freq',
+    );
+
+    $public_fields['status'] = array(
+      'property' => 'field_asst_status',
     );
 
     $public_fields['operation'] = array(
@@ -108,7 +119,7 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
       'resource' => array(
         'hr_operation' => 'operations',
       ),
-    );*/
+    );
 
     return $public_fields;
   }
