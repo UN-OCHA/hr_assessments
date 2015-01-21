@@ -136,6 +136,10 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
       'process_callbacks' => array(array($this, 'getEntity')),
     );
 
+    $public_fields['url'] = array(
+      'property' => 'url',
+    );
+
     return $public_fields;
   }
 
