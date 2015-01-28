@@ -76,6 +76,9 @@ function hr_assessments_strongarm() {
         'redirect' => array(
           'weight' => '4',
         ),
+        'language' => array(
+          'weight' => '-10',
+        ),
       ),
       'display' => array(),
     ),
