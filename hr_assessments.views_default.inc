@@ -54,7 +54,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_locations']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_locations']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_locations']['bypass_access'] = 0;
-  /* Field: Indexed Node: Leading/Coordinating Organizations */
+  /* Field: Indexed Node: Lead Agencies */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -124,7 +124,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['sorts']['field_asst_date_value']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['field_asst_date_value']['field'] = 'field_asst_date_value';
   $handler->display->display_options['sorts']['field_asst_date_value']['order'] = 'DESC';
-  /* Contextual filter: Indexed Node: Space(s) */
+  /* Contextual filter: Indexed Node: Groups audience */
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['arguments']['og_group_ref']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['og_group_ref']['field'] = 'og_group_ref';
@@ -294,7 +294,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_asst_other_location']['id'] = 'field_asst_other_location';
   $handler->display->display_options['fields']['field_asst_other_location']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_asst_other_location']['field'] = 'field_asst_other_location';
-  /* Field: Indexed Node: Leading/Coordinating Organizations */
+  /* Field: Indexed Node: Lead Agencies */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -500,7 +500,7 @@ function hr_assessments_views_default_views() {
   );
   $handler->display->display_options['fields']['field_phones']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_phones']['separator'] = ';';
-  /* Field: Field collection item: Cluster coordinator Email */
+  /* Field: Field collection item: Email */
   $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['table'] = 'entity_field_collection_item';
   $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
@@ -566,7 +566,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Leading/Coordinating Organizations */
+  /* Field: Indexed Node: Lead Agencies */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -577,7 +577,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_organizations']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_organizations']['bypass_access'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Indexed Node: Space(s) */
+  /* Contextual filter: Indexed Node: Groups audience */
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['arguments']['og_group_ref']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['og_group_ref']['field'] = 'og_group_ref';
@@ -825,6 +825,46 @@ function hr_assessments_views_default_views() {
     30037204 => 0,
   );
   $handler->display->display_options['filters']['field_bundles_target_id_entityreference_filter']['reference_display'] = 'hr_bundles:entityreference_1';
+  /* Filter criterion: Field: Organization (field_organizations) (reference filter) */
+  $handler->display->display_options['filters']['field_organizations_target_id_entityreference_filter']['id'] = 'field_organizations_target_id_entityreference_filter';
+  $handler->display->display_options['filters']['field_organizations_target_id_entityreference_filter']['table'] = 'field_data_field_organizations';
+  $handler->display->display_options['filters']['field_organizations_target_id_entityreference_filter']['field'] = 'field_organizations_target_id_entityreference_filter';
+  $handler->display->display_options['filters']['field_organizations_target_id_entityreference_filter']['group'] = 1;
+  $handler->display->display_options['filters']['field_organizations_target_id_entityreference_filter']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_organizations_target_id_entityreference_filter']['expose']['operator_id'] = 'field_organizations_target_id_entityreference_filter_op';
+  $handler->display->display_options['filters']['field_organizations_target_id_entityreference_filter']['expose']['label'] = 'Leading Organizations';
+  $handler->display->display_options['filters']['field_organizations_target_id_entityreference_filter']['expose']['operator'] = 'field_organizations_target_id_entityreference_filter_op';
+  $handler->display->display_options['filters']['field_organizations_target_id_entityreference_filter']['expose']['identifier'] = 'field_organizations_target_id_entityreference_filter';
+  $handler->display->display_options['filters']['field_organizations_target_id_entityreference_filter']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    30037204 => 0,
+    200153887 => 0,
+    218860149 => 0,
+    188284353 => 0,
+    235660466 => 0,
+  );
+  $handler->display->display_options['filters']['field_organizations_target_id_entityreference_filter']['reference_display'] = 'hr_organizations:entityreference_1';
+  /* Filter criterion: Content: Participating Organizations (field_organizations2) (reference filter) */
+  $handler->display->display_options['filters']['field_organizations2_target_id_entityreference_filter']['id'] = 'field_organizations2_target_id_entityreference_filter';
+  $handler->display->display_options['filters']['field_organizations2_target_id_entityreference_filter']['table'] = 'field_data_field_organizations2';
+  $handler->display->display_options['filters']['field_organizations2_target_id_entityreference_filter']['field'] = 'field_organizations2_target_id_entityreference_filter';
+  $handler->display->display_options['filters']['field_organizations2_target_id_entityreference_filter']['group'] = 1;
+  $handler->display->display_options['filters']['field_organizations2_target_id_entityreference_filter']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_organizations2_target_id_entityreference_filter']['expose']['operator_id'] = 'field_organizations2_target_id_entityreference_filter_op';
+  $handler->display->display_options['filters']['field_organizations2_target_id_entityreference_filter']['expose']['label'] = 'Participating Organizations';
+  $handler->display->display_options['filters']['field_organizations2_target_id_entityreference_filter']['expose']['operator'] = 'field_organizations2_target_id_entityreference_filter_op';
+  $handler->display->display_options['filters']['field_organizations2_target_id_entityreference_filter']['expose']['identifier'] = 'field_organizations2_target_id_entityreference_filter';
+  $handler->display->display_options['filters']['field_organizations2_target_id_entityreference_filter']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    30037204 => 0,
+    200153887 => 0,
+    218860149 => 0,
+    188284353 => 0,
+    235660466 => 0,
+  );
+  $handler->display->display_options['filters']['field_organizations2_target_id_entityreference_filter']['reference_display'] = 'hr_organizations:entityreference_1';
   /* Filter criterion: Content: Disasters (field_disasters) */
   $handler->display->display_options['filters']['field_disasters_target_id']['id'] = 'field_disasters_target_id';
   $handler->display->display_options['filters']['field_disasters_target_id']['table'] = 'field_data_field_disasters';
@@ -948,7 +988,7 @@ function hr_assessments_views_default_views() {
     'hr_assessment' => 'hr_assessment',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  $handler->display->display_options['pane_title'] = 'Assessments per space';
+  $handler->display->display_options['pane_title'] = 'Assessments from context';
   $handler->display->display_options['pane_category']['name'] = 'Assessments';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';
@@ -990,13 +1030,15 @@ function hr_assessments_views_default_views() {
     t('Custom'),
     t('Space'),
     t('Clusters/Sectors'),
+    t('Leading Organizations'),
+    t('Participating Organizations'),
     t('Disasters'),
     t('Locations'),
     t('Themes'),
     t('Assessments'),
     t('Per space'),
     t('Latest Assessments'),
-    t('Assessments per space'),
+    t('Assessments from context'),
   );
   $export['hr_assessments_panes'] = $view;
 
