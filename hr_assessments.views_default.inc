@@ -1004,7 +1004,7 @@ function hr_assessments_views_default_views() {
     'field_bundles_target_id' => array(
       'type' => 'context',
       'context' => 'entity:node.nid',
-      'context_optional' => 0,
+      'context_optional' => 1,
       'panel' => '0',
       'fixed' => '',
       'label' => 'Content: Clusters/Sectors (field_bundles)',
@@ -1012,7 +1012,7 @@ function hr_assessments_views_default_views() {
     'og_group_ref_target_id' => array(
       'type' => 'context',
       'context' => 'entity:node.nid',
-      'context_optional' => 0,
+      'context_optional' => 1,
       'panel' => '0',
       'fixed' => '',
       'label' => 'Group',
