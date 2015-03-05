@@ -116,6 +116,21 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
       'property' => 'field_asst_status',
     );
 
+    $public_fields['report'] = array(
+      'property' => 'field_asst_report',
+      'process_callbacks' => array(array($this, 'formatFieldCollection')),
+    );
+
+    $public_fields['questionnaire'] = array(
+      'property' => 'field_asst_questionnaire',
+      'process_callbacks' => array(array($this, 'formatFieldCollection')),
+    );
+
+    $public_fields['data'] = array(
+      'property' => 'field_asst_data',
+      'process_callbacks' => array(array($this, 'formatFieldCollection')),
+    );
+
     $public_fields['themes'] = array(
       'property' => 'field_themes',
       'resource' => array(
@@ -190,6 +205,28 @@ class RestfulEntityNodeAssessments extends \RestfulEntityBaseNode {
       }
     }
     return $return;
+  }
+
+  protected function formatFieldCollection($value) {
+    $tmp = new stdClass();
+    if (!empty($value->field_asst_accessibility)) {
+      $tmp->accessibility = $value->field_asst_accessibility[LANGUAGE_NONE][0]['value'];
+    }
+    if (!empty($value->field_asst_file)) {
+      $tmp->file = new stdClass();
+      $field_file = $value->field_asst_file[LANGUAGE_NONE][0];
+      $tmp->file->fid = $field_file['fid'];
+      $tmp->file->filename = $field_file['filename'];
+      $tmp->file->filesize = $field_file['filesize'];
+      $tmp->file->url = file_create_url($field_file['uri']);
+    }
+    if (!empty($value->field_asst_instructions)) {
+      $tmp->instructions = $value->field_asst_instructions[LANGUAGE_NONE][0]['value'];
+    }
+    if (!empty($value->field_asst_url)) {
+      $tmp->url = $value->field_asst_url[LANGUAGE_NONE][0]['url'];
+    }
+    return $tmp;
   }
 
 }
