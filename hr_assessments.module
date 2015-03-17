@@ -86,6 +86,11 @@ function hr_assessments_search_api_views_query_alter(&$view, &$query) {
           if ($node->type == 'hr_disaster') {
             $condition = array('field_disasters', $nid, '=');
           }
+          // Clusters as spaces
+          // See http://atrium.humanitarianresponse.info/humanitarian_response/node/4363
+          elseif ($node->type == 'hr_bundle') {
+            $condition = array('field_bundles', $nid, '=');
+          }
         }
       }
     }
