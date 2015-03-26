@@ -536,6 +536,7 @@ function hr_assessments_views_default_views() {
     'name_field' => 'nothing',
     'description_field' => 'field_organizations',
     'style_field' => '',
+    'projection' => 'EPSG:4326',
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
