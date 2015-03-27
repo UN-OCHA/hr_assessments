@@ -13,7 +13,7 @@ function hr_assessments_views_default_views() {
   $view = new view();
   $view->name = 'hr_assessments';
   $view->description = '';
-  $view->tag = 'Contacts';
+  $view->tag = 'Assessments';
   $view->base_table = 'search_api_index_default_node_index';
   $view->human_name = 'Assessments';
   $view->core = 7;
@@ -47,14 +47,14 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Locations */
+  /* Field: Indexed Node: Country/Region */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_locations']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_locations']['bypass_access'] = 0;
-  /* Field: Indexed Node: Lead Agencies */
+  /* Field: Indexed Node: Organization */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -124,7 +124,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['sorts']['field_asst_date_value']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['field_asst_date_value']['field'] = 'field_asst_date_value';
   $handler->display->display_options['sorts']['field_asst_date_value']['order'] = 'DESC';
-  /* Contextual filter: Indexed Node: Groups audience */
+  /* Contextual filter: Indexed Node: Space(s) */
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['arguments']['og_group_ref']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['og_group_ref']['field'] = 'og_group_ref';
@@ -281,7 +281,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Locations */
+  /* Field: Indexed Node: Country/Region */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
@@ -294,7 +294,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_asst_other_location']['id'] = 'field_asst_other_location';
   $handler->display->display_options['fields']['field_asst_other_location']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_asst_other_location']['field'] = 'field_asst_other_location';
-  /* Field: Indexed Node: Lead Agencies */
+  /* Field: Indexed Node: Organization */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -567,7 +567,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Lead Agencies */
+  /* Field: Indexed Node: Organization */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -578,7 +578,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_organizations']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_organizations']['bypass_access'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Indexed Node: Groups audience */
+  /* Contextual filter: Indexed Node: Space(s) */
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['arguments']['og_group_ref']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['og_group_ref']['field'] = 'og_group_ref';
@@ -635,6 +635,99 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '6';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Master */
+  $handler = $view->new_display('page', 'Master', 'global_master');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'search_result';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['path'] = 'assessments';
+
+  /* Display: List */
+  $handler = $view->new_display('page', 'List', 'global_list');
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['path'] = 'assessments/list';
+  $handler->display->display_options['menu']['type'] = 'default tab';
+  $handler->display->display_options['menu']['title'] = 'List';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $handler->display->display_options['tab_options']['weight'] = '0';
+
+  /* Display: Table */
+  $handler = $view->new_display('page', 'Table', 'global_table');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_bundles' => 'field_bundles',
+    'field_first_name' => 'field_first_name',
+    'field_last_name' => 'field_last_name',
+    'field_email' => 'field_email',
+    'field_job_title' => 'field_job_title',
+    'field_organizations' => 'field_organizations',
+    'field_location' => 'field_location',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_bundles' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_first_name' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_last_name' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_email' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_job_title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_organizations' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_location' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['path'] = 'assessments/table';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Table';
+  $handler->display->display_options['menu']['weight'] = '2';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $handler->display->display_options['tab_options']['weight'] = '0';
   $translatables['hr_assessments'] = array(
     t('Master'),
     t('more'),
@@ -652,7 +745,7 @@ function hr_assessments_views_default_views() {
     t('last »'),
     t('There are no results'),
     t('Title'),
-    t('Locations'),
+    t('Country/Region'),
     t('Organization'),
     t('Participating Organizations'),
     t('Clusters/Sectors'),
@@ -709,7 +802,7 @@ function hr_assessments_views_default_views() {
   $view = new view();
   $view->name = 'hr_assessments_panes';
   $view->description = '';
-  $view->tag = 'Documents';
+  $view->tag = 'Assessments';
   $view->base_table = 'node';
   $view->human_name = 'Assessments Panes';
   $view->core = 7;
