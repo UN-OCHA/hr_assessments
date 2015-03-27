@@ -86,6 +86,12 @@ function hr_assessments_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '1',
         ),
+        'facetapi-I2F0K0pK8hxp905pSaA5FBI0cS76fOV1' => array(
+          'module' => 'facetapi',
+          'delta' => 'I2F0K0pK8hxp905pSaA5FBI0cS76fOV1',
+          'region' => 'sidebar_first',
+          'weight' => '2',
+        ),
       ),
     ),
   );
@@ -171,6 +177,12 @@ function hr_assessments_context_default_contexts() {
           'delta' => '9ew5LitJZ6pWU71gbHp1XW9oAOBwV11z',
           'region' => 'sidebar_first',
           'weight' => '1',
+        ),
+        'facetapi-I2F0K0pK8hxp905pSaA5FBI0cS76fOV1' => array(
+          'module' => 'facetapi',
+          'delta' => 'I2F0K0pK8hxp905pSaA5FBI0cS76fOV1',
+          'region' => 'sidebar_first',
+          'weight' => '2',
         ),
       ),
     ),
@@ -258,6 +270,12 @@ function hr_assessments_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '1',
         ),
+        'facetapi-I2F0K0pK8hxp905pSaA5FBI0cS76fOV1' => array(
+          'module' => 'facetapi',
+          'delta' => 'I2F0K0pK8hxp905pSaA5FBI0cS76fOV1',
+          'region' => 'sidebar_first',
+          'weight' => '2',
+        ),
       ),
     ),
   );
@@ -344,6 +362,12 @@ function hr_assessments_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '1',
         ),
+        'facetapi-I2F0K0pK8hxp905pSaA5FBI0cS76fOV1' => array(
+          'module' => 'facetapi',
+          'delta' => 'I2F0K0pK8hxp905pSaA5FBI0cS76fOV1',
+          'region' => 'sidebar_first',
+          'weight' => '2',
+        ),
       ),
     ),
   );
@@ -429,6 +453,12 @@ function hr_assessments_context_default_contexts() {
           'delta' => '9ew5LitJZ6pWU71gbHp1XW9oAOBwV11z',
           'region' => 'sidebar_first',
           'weight' => '1',
+        ),
+        'facetapi-I2F0K0pK8hxp905pSaA5FBI0cS76fOV1' => array(
+          'module' => 'facetapi',
+          'delta' => 'I2F0K0pK8hxp905pSaA5FBI0cS76fOV1',
+          'region' => 'sidebar_first',
+          'weight' => '2',
         ),
       ),
     ),
