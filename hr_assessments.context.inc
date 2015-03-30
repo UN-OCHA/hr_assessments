@@ -302,10 +302,16 @@ function hr_assessments_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views--exp-hr_assessments-global_master' => array(
+        '9a75ed90e2d48b07ad8545d51a9af9d5' => array(
           'module' => 'views',
-          'delta' => '-exp-hr_assessments-global_master',
+          'delta' => '9a75ed90e2d48b07ad8545d51a9af9d5',
           'region' => 'branding',
+          'weight' => '-10',
+        ),
+        'system-main-menu' => array(
+          'module' => 'system',
+          'delta' => 'main-menu',
+          'region' => 'navigation',
           'weight' => '-10',
         ),
         'current_search-hr_current_search' => array(
@@ -314,23 +320,29 @@ function hr_assessments_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
+        'facetapi-djs1o6VrivuNykMYeYyvXVKT480Y01tL' => array(
+          'module' => 'facetapi',
+          'delta' => 'djs1o6VrivuNykMYeYyvXVKT480Y01tL',
+          'region' => 'sidebar_first',
+          'weight' => '-9',
+        ),
         'facetapi-3quDa8MFI2Sa9usljzl0qr3fbusfVG93' => array(
           'module' => 'facetapi',
           'delta' => '3quDa8MFI2Sa9usljzl0qr3fbusfVG93',
           'region' => 'sidebar_first',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
         'facetapi-ZXNTNWz3w05hh3aLGFw0ofPRZUa5biIZ' => array(
           'module' => 'facetapi',
           'delta' => 'ZXNTNWz3w05hh3aLGFw0ofPRZUa5biIZ',
           'region' => 'sidebar_first',
-          'weight' => '-8',
+          'weight' => '-7',
         ),
         'facetapi-MOMhTUv0Q9alQbixPzg3lFUS6pPxK0rB' => array(
           'module' => 'facetapi',
           'delta' => 'MOMhTUv0Q9alQbixPzg3lFUS6pPxK0rB',
           'region' => 'sidebar_first',
-          'weight' => '-7',
+          'weight' => '-6',
         ),
         'facetapi-uulIYjH3ZtSu9hhI5ARgBYQeEUNqWe17' => array(
           'module' => 'facetapi',
@@ -368,6 +380,11 @@ function hr_assessments_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '2',
         ),
+      ),
+    ),
+    'disable_context' => array(
+      'disabled' => array(
+        'outside_space' => 'outside_space',
       ),
     ),
   );
@@ -394,10 +411,16 @@ function hr_assessments_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views--exp-hr_assessments-global_table' => array(
+        '88e7fc1471098ac2a8ab3ab9920623e2' => array(
           'module' => 'views',
-          'delta' => '-exp-hr_assessments-global_table',
+          'delta' => '88e7fc1471098ac2a8ab3ab9920623e2',
           'region' => 'branding',
+          'weight' => '-10',
+        ),
+        'system-main-menu' => array(
+          'module' => 'system',
+          'delta' => 'main-menu',
+          'region' => 'navigation',
           'weight' => '-10',
         ),
         'current_search-hr_current_search' => array(
@@ -405,6 +428,18 @@ function hr_assessments_context_default_contexts() {
           'delta' => 'hr_current_search',
           'region' => 'sidebar_first',
           'weight' => '-10',
+        ),
+        'facetapi-djs1o6VrivuNykMYeYyvXVKT480Y01tL' => array(
+          'module' => 'facetapi',
+          'delta' => 'djs1o6VrivuNykMYeYyvXVKT480Y01tL',
+          'region' => 'sidebar_first',
+          'weight' => '-8',
+        ),
+        'facetapi-djs1o6VrivuNykMYeYyvXVKT480Y01tL' => array(
+          'module' => 'facetapi',
+          'delta' => 'djs1o6VrivuNykMYeYyvXVKT480Y01tL',
+          'region' => 'sidebar_first',
+          'weight' => '-7',
         ),
         'facetapi-3quDa8MFI2Sa9usljzl0qr3fbusfVG93' => array(
           'module' => 'facetapi',
@@ -460,6 +495,11 @@ function hr_assessments_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '2',
         ),
+      ),
+    ),
+    'disable_context' => array(
+      'disabled' => array(
+        'outside_space' => 'outside_space',
       ),
     ),
   );
