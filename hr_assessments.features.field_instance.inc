@@ -221,6 +221,7 @@ function hr_assessments_field_default_field_instances() {
     'label' => 'URL',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -274,6 +275,7 @@ function hr_assessments_field_default_field_instances() {
     'label' => 'URL (Restricted)',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -518,6 +520,7 @@ function hr_assessments_field_default_field_instances() {
     'label' => 'URL',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -571,6 +574,7 @@ function hr_assessments_field_default_field_instances() {
     'label' => 'URL (Restricted)',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -815,6 +819,7 @@ function hr_assessments_field_default_field_instances() {
     'label' => 'URL',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -868,6 +873,7 @@ function hr_assessments_field_default_field_instances() {
     'label' => 'URL (Restricted)',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1671,7 +1677,7 @@ function hr_assessments_field_default_field_instances() {
   $field_instances['node-hr_assessment-field_bundles'] = array(
     'bundle' => 'hr_assessment',
     'default_value' => NULL,
-    'default_value_function' => '',
+    'default_value_function' => 'entityreference_prepopulate_field_default_value',
     'deleted' => 0,
     'description' => '',
     'display' => array(
