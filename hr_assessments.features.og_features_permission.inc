@@ -142,7 +142,9 @@ function hr_assessments_og_features_default_permissions() {
 
   // Exported og permission: 'node:hr_operation:access publishing options of hr_assessment content'
   $permissions['node:hr_operation:access publishing options of hr_assessment content'] = array(
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
   );
 
   // Exported og permission: 'node:hr_operation:access publishing options of hr_geographic_level content'
@@ -168,6 +170,7 @@ function hr_assessments_og_features_default_permissions() {
   // Exported og permission: 'node:hr_operation:create hr_assessment content'
   $permissions['node:hr_operation:create hr_assessment content'] = array(
     'roles' => array(
+      'bundle member' => 'bundle member',
       'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',
@@ -184,6 +187,7 @@ function hr_assessments_og_features_default_permissions() {
   // Exported og permission: 'node:hr_operation:delete any hr_assessment content'
   $permissions['node:hr_operation:delete any hr_assessment content'] = array(
     'roles' => array(
+      'bundle member' => 'bundle member',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -199,6 +203,7 @@ function hr_assessments_og_features_default_permissions() {
   // Exported og permission: 'node:hr_operation:delete own hr_assessment content'
   $permissions['node:hr_operation:delete own hr_assessment content'] = array(
     'roles' => array(
+      'bundle member' => 'bundle member',
       'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',
@@ -215,6 +220,7 @@ function hr_assessments_og_features_default_permissions() {
   // Exported og permission: 'node:hr_operation:update any hr_assessment content'
   $permissions['node:hr_operation:update any hr_assessment content'] = array(
     'roles' => array(
+      'bundle member' => 'bundle member',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -230,6 +236,7 @@ function hr_assessments_og_features_default_permissions() {
   // Exported og permission: 'node:hr_operation:update own hr_assessment content'
   $permissions['node:hr_operation:update own hr_assessment content'] = array(
     'roles' => array(
+      'bundle member' => 'bundle member',
       'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',

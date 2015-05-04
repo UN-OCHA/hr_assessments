@@ -1700,7 +1700,6 @@ function hr_assessments_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_bundles',
     'label' => 'Clusters/Sectors',
-    'required' => 1,
     'settings' => array(
       'behaviors' => array(
         'og_widget' => array(
@@ -1713,7 +1712,12 @@ function hr_assessments_field_default_field_instances() {
           'status' => TRUE,
         ),
         'prepopulate' => array(
-          'status' => 0,
+          'action' => 'none',
+          'fallback' => 'none',	
+          'providers' => array(
+            'url' => 1,
+          ),	
+          'status' => 1,
         ),
       ),
       'entity_translation_sync' => FALSE,
@@ -2339,7 +2343,7 @@ function hr_assessments_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'og_group_ref',
     'label' => 'Space(s)',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'behaviors' => array(
         'og_widget' => array(
