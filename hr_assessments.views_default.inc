@@ -533,7 +533,7 @@ function hr_assessments_views_default_views() {
     'other_right' => 'field_locations_field_geofield_lat',
     'other_bottom' => 'field_locations_field_geofield_lat',
     'other_left' => 'field_locations_field_geofield_lat',
-    'name_field' => '',
+    'name_field' => 'title',
     'description_field' => '',
     'style_field' => '',
   );
