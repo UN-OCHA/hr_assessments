@@ -17,13 +17,13 @@ function hr_assessments_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "feeds_tamper" && $api == "feeds_tamper_default") {
     return array("version" => "2");
   }
+  if ($module == "openlayers" && $api == "openlayers_maps") {
+    return array("version" => "1");
+  }
   if ($module == "panelizer" && $api == "panelizer") {
     return array("version" => "1");
   }
   if ($module == "strongarm" && $api == "strongarm") {
-    return array("version" => "1");
-  }
-  if ($module == "openlayers" && $api == "openlayers_maps") {
     return array("version" => "1");
   }
 }
@@ -57,5 +57,6 @@ function hr_assessments_node_info() {
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }

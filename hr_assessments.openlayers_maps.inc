@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * hr_contacts.openlayers_maps.inc
+ * hr_assessments.openlayers_maps.inc
  */
 
 /**
