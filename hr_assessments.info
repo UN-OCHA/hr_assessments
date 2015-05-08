@@ -202,6 +202,7 @@ features[og_features_permission][] = node:hr_space:update own hr_assessment cont
 features[og_features_permission][] = node:hr_space:update own hr_geographic_level content
 features[og_features_permission][] = node:hr_space:view any unpublished hr_assessment content
 features[og_features_permission][] = node:hr_space:view any unpublished hr_geographic_level content
+features[openlayers_maps][] = hr_assessments
 features[panelizer_defaults][] = node:hr_assessment:default:default
 features[panelizer_defaults][] = node:hr_assessment:default:search_result
 features[taxonomy][] = hr_population_type

@@ -618,13 +618,13 @@ function hr_assessments_views_default_views() {
 
   /* Display: Map */
   $handler = $view->new_display('page', 'Map', 'map');
-  $handler->display->display_options['enabled'] = FALSE;
+  $handler->display->display_options['enabled'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'openlayers_map';
-  $handler->display->display_options['style_options']['map'] = 'hr_contacts';
+  $handler->display->display_options['style_options']['map'] = 'hr_assessments';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
