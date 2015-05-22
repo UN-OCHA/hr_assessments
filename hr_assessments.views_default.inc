@@ -527,15 +527,25 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['style_options']['data_source'] = array(
     'value' => 'other_latlon',
     'other_lat' => 'field_locations_field_geofield_lat',
-    'other_lon' => 'field_locations_field_geofield_lat',
+    'other_lon' => 'field_locations_field_geofield_lon',
     'wkt' => 'field_locations_field_geofield_lat',
+    'projection' => 'EPSG:4326',
     'other_top' => 'field_locations_field_geofield_lat',
     'other_right' => 'field_locations_field_geofield_lat',
     'other_bottom' => 'field_locations_field_geofield_lat',
     'other_left' => 'field_locations_field_geofield_lat',
     'name_field' => 'title',
-    'description_field' => '',
+    'description_field' => 'title',
     'style_field' => '',
+  );
+  $handler->display->display_options['style_options']['attributes'] = array(
+    'display' => array(
+      'title' => 'title',
+      'name' => 'name',
+      'field_locations_field_geofield_lat' => 0,
+      'field_locations_field_geofield_lon' => 0,
+      'description' => 0,
+    ),
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
@@ -565,8 +575,11 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_type'] = '0';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Indexed Node: Groups audience */
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
