@@ -47,14 +47,14 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Geographical Location (Origin) */
+  /* Field: Indexed Node: Locations */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_locations']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_locations']['bypass_access'] = 0;
-  /* Field: Indexed Node: Organization */
+  /* Field: Indexed Node: Leading/Coordinating Organizations */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -80,7 +80,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_asst_status']['id'] = 'field_asst_status';
   $handler->display->display_options['fields']['field_asst_status']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_asst_status']['field'] = 'field_asst_status';
-  /* Field: Indexed Node: Date */
+  /* Field: Indexed Node: Report Date */
   $handler->display->display_options['fields']['field_asst_date']['id'] = 'field_asst_date';
   $handler->display->display_options['fields']['field_asst_date']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_asst_date']['field'] = 'field_asst_date';
@@ -97,6 +97,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_asst_report']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_asst_report']['field'] = 'field_asst_report';
   $handler->display->display_options['fields']['field_asst_report']['label'] = 'Report';
+  $handler->display->display_options['fields']['field_asst_report']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_asst_report']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_asst_report']['display'] = 'view';
   $handler->display->display_options['fields']['field_asst_report']['view_mode'] = 'full';
@@ -106,6 +107,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_asst_questionnaire']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_asst_questionnaire']['field'] = 'field_asst_questionnaire';
   $handler->display->display_options['fields']['field_asst_questionnaire']['label'] = 'Questionnaire';
+  $handler->display->display_options['fields']['field_asst_questionnaire']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_asst_questionnaire']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_asst_questionnaire']['display'] = 'view';
   $handler->display->display_options['fields']['field_asst_questionnaire']['view_mode'] = 'full';
@@ -115,16 +117,20 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_asst_data']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_asst_data']['field'] = 'field_asst_data';
   $handler->display->display_options['fields']['field_asst_data']['label'] = 'Data';
+  $handler->display->display_options['fields']['field_asst_data']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_asst_data']['alter']['text'] = '<strong>Report</strong>: [field_asst_report]<br />
+<strong>Questionnaire</strong>: [field_asst_questionnaire]<br />
+<strong>Data</strong>: [field_asst_data]';
   $handler->display->display_options['fields']['field_asst_data']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_asst_data']['display'] = 'view';
   $handler->display->display_options['fields']['field_asst_data']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_asst_data']['bypass_access'] = 0;
-  /* Sort criterion: Date: Start date (indexed) */
+  /* Sort criterion: Report Date: Start date (indexed) */
   $handler->display->display_options['sorts']['field_asst_date_value']['id'] = 'field_asst_date_value';
   $handler->display->display_options['sorts']['field_asst_date_value']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['field_asst_date_value']['field'] = 'field_asst_date_value';
   $handler->display->display_options['sorts']['field_asst_date_value']['order'] = 'DESC';
-  /* Contextual filter: Indexed Node: Groups audience */
+  /* Contextual filter: Indexed Node: Space(s) */
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['arguments']['og_group_ref']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['og_group_ref']['field'] = 'og_group_ref';
@@ -281,7 +287,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Geographical Location (Origin) */
+  /* Field: Indexed Node: Locations */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
@@ -294,7 +300,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_asst_other_location']['id'] = 'field_asst_other_location';
   $handler->display->display_options['fields']['field_asst_other_location']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_asst_other_location']['field'] = 'field_asst_other_location';
-  /* Field: Indexed Node: Organization */
+  /* Field: Indexed Node: Leading/Coordinating Organizations */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -318,14 +324,14 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_bundles']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_bundles']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_bundles']['bypass_access'] = 0;
-  /* Field: Date: Start date (indexed) */
+  /* Field: Report Date: Start date (indexed) */
   $handler->display->display_options['fields']['field_asst_date_value']['id'] = 'field_asst_date_value';
   $handler->display->display_options['fields']['field_asst_date_value']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_asst_date_value']['field'] = 'field_asst_date_value';
   $handler->display->display_options['fields']['field_asst_date_value']['label'] = 'Start date';
   $handler->display->display_options['fields']['field_asst_date_value']['date_format'] = 'hr_1';
   $handler->display->display_options['fields']['field_asst_date_value']['link_to_entity'] = 0;
-  /* Field: Date: End date (indexed) */
+  /* Field: Report Date: End date (indexed) */
   $handler->display->display_options['fields']['field_asst_date_value2']['id'] = 'field_asst_date_value2';
   $handler->display->display_options['fields']['field_asst_date_value2']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_asst_date_value2']['field'] = 'field_asst_date_value2';
@@ -500,7 +506,7 @@ function hr_assessments_views_default_views() {
   );
   $handler->display->display_options['fields']['field_phones']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_phones']['separator'] = ';';
-  /* Field: Field collection item: Cluster coordinator Email */
+  /* Field: Field collection item: Email */
   $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['table'] = 'entity_field_collection_item';
   $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
@@ -552,7 +558,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Geographical Location (Origin) » Geofield: Latitude (indexed) */
+  /* Field: Locations » Geofield: Latitude (indexed) */
   $handler->display->display_options['fields']['field_locations_field_geofield_lat']['id'] = 'field_locations_field_geofield_lat';
   $handler->display->display_options['fields']['field_locations_field_geofield_lat']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_locations_field_geofield_lat']['field'] = 'field_locations_field_geofield_lat';
@@ -561,7 +567,7 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_locations_field_geofield_lat']['precision'] = '0';
   $handler->display->display_options['fields']['field_locations_field_geofield_lat']['separator'] = '';
   $handler->display->display_options['fields']['field_locations_field_geofield_lat']['link_to_entity'] = 0;
-  /* Field: Geographical Location (Origin) » Geofield: Longitude (indexed) */
+  /* Field: Locations » Geofield: Longitude (indexed) */
   $handler->display->display_options['fields']['field_locations_field_geofield_lon']['id'] = 'field_locations_field_geofield_lon';
   $handler->display->display_options['fields']['field_locations_field_geofield_lon']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_locations_field_geofield_lon']['field'] = 'field_locations_field_geofield_lon';
@@ -570,18 +576,27 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['fields']['field_locations_field_geofield_lon']['precision'] = '0';
   $handler->display->display_options['fields']['field_locations_field_geofield_lon']['separator'] = '';
   $handler->display->display_options['fields']['field_locations_field_geofield_lon']['link_to_entity'] = 0;
+  /* Field: Indexed Node: Node ID */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['separator'] = '';
+  $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
   /* Field: Indexed Node: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['element_type'] = '0';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = 'node/[nid]';
+  $handler->display->display_options['fields']['title']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['title']['link_to_entity'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Indexed Node: Groups audience */
+  /* Contextual filter: Indexed Node: Space(s) */
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['arguments']['og_group_ref']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['og_group_ref']['field'] = 'og_group_ref';
@@ -742,15 +757,18 @@ function hr_assessments_views_default_views() {
     t('last »'),
     t('There are no results'),
     t('Title'),
-    t('Geographical Location (Origin)'),
+    t('Locations'),
     t('Organization'),
     t('Participating Organizations'),
     t('Clusters/Sectors'),
     t('Status'),
-    t('Date'),
+    t('Report Date'),
     t('Report'),
     t('Questionnaire'),
     t('Data'),
+    t('<strong>Report</strong>: [field_asst_report]<br />
+<strong>Questionnaire</strong>: [field_asst_questionnaire]<br />
+<strong>Data</strong>: [field_asst_data]'),
     t('All'),
     t('Search Assessments'),
     t('List'),
@@ -818,19 +836,19 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Broken/missing handler */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Broken/missing handler */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Broken/missing handler */
+  /* Contextual filter: Field: Space(s) (og_group_ref) */
   $handler->display->display_options['arguments']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['table'] = 'og_membership';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';
@@ -839,14 +857,14 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['arguments']['og_group_ref_target_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Broken/missing handler */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Broken/missing handler */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -868,14 +886,14 @@ function hr_assessments_views_default_views() {
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Broken/missing handler */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Broken/missing handler */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -883,7 +901,7 @@ function hr_assessments_views_default_views() {
     'hr_assessment' => 'hr_assessment',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Broken/missing handler */
+  /* Filter criterion: Field: Space(s) (og_group_ref) */
   $handler->display->display_options['filters']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
   $handler->display->display_options['filters']['og_group_ref_target_id']['table'] = 'og_membership';
   $handler->display->display_options['filters']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';
@@ -899,7 +917,7 @@ function hr_assessments_views_default_views() {
     1 => 0,
     30037204 => 0,
   );
-  /* Filter criterion: Broken/missing handler */
+  /* Filter criterion: Content: Clusters/Sectors (field_bundles) (reference filter) */
   $handler->display->display_options['filters']['field_bundles_target_id_entityreference_filter']['id'] = 'field_bundles_target_id_entityreference_filter';
   $handler->display->display_options['filters']['field_bundles_target_id_entityreference_filter']['table'] = 'og_membership';
   $handler->display->display_options['filters']['field_bundles_target_id_entityreference_filter']['field'] = 'field_bundles_target_id_entityreference_filter';
@@ -918,7 +936,7 @@ function hr_assessments_views_default_views() {
     30037204 => 0,
   );
   $handler->display->display_options['filters']['field_bundles_target_id_entityreference_filter']['reference_display'] = 'hr_bundles:entityreference_1';
-  /* Filter criterion: Broken/missing handler */
+  /* Filter criterion: Field: Organization (field_organizations) (reference filter) */
   $handler->display->display_options['filters']['field_organizations_target_id_entityreference_filter']['id'] = 'field_organizations_target_id_entityreference_filter';
   $handler->display->display_options['filters']['field_organizations_target_id_entityreference_filter']['table'] = 'field_data_field_organizations';
   $handler->display->display_options['filters']['field_organizations_target_id_entityreference_filter']['field'] = 'field_organizations_target_id_entityreference_filter';

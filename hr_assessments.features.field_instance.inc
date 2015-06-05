@@ -22,7 +22,7 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -56,10 +56,12 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
+        'label' => 'inline',
+        'module' => 'file_entity',
+        'settings' => array(
+          'text' => 'Download',
+        ),
+        'type' => 'file_download_link',
         'weight' => 1,
       ),
     ),
@@ -113,10 +115,12 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
+        'label' => 'inline',
+        'module' => 'file_entity',
+        'settings' => array(
+          'text' => 'Download',
+        ),
+        'type' => 'file_download_link',
         'weight' => 3,
       ),
     ),
@@ -170,7 +174,7 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -209,10 +213,10 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'link_label',
         'weight' => 2,
       ),
     ),
@@ -263,10 +267,10 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'link_label',
         'weight' => 4,
       ),
     ),
@@ -321,7 +325,7 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -355,10 +359,12 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
+        'label' => 'inline',
+        'module' => 'file_entity',
+        'settings' => array(
+          'text' => 'Download',
+        ),
+        'type' => 'file_download_link',
         'weight' => 1,
       ),
     ),
@@ -412,10 +418,12 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
+        'label' => 'inline',
+        'module' => 'file_entity',
+        'settings' => array(
+          'text' => 'Download',
+        ),
+        'type' => 'file_download_link',
         'weight' => 3,
       ),
     ),
@@ -469,7 +477,7 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -508,10 +516,10 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'link_label',
         'weight' => 2,
       ),
     ),
@@ -562,10 +570,10 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'link_label',
         'weight' => 4,
       ),
     ),
@@ -620,7 +628,7 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -654,10 +662,12 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
+        'label' => 'inline',
+        'module' => 'file_entity',
+        'settings' => array(
+          'text' => 'Download',
+        ),
+        'type' => 'file_download_link',
         'weight' => 1,
       ),
     ),
@@ -711,10 +721,12 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
+        'label' => 'inline',
+        'module' => 'file_entity',
+        'settings' => array(
+          'text' => 'Download',
+        ),
+        'type' => 'file_download_link',
         'weight' => 3,
       ),
     ),
@@ -768,7 +780,7 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -807,10 +819,10 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'link_label',
         'weight' => 2,
       ),
     ),
@@ -861,10 +873,10 @@ function hr_assessments_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'link_label',
         'weight' => 4,
       ),
     ),
@@ -1152,7 +1164,7 @@ function hr_assessments_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_asst_date',
-    'label' => 'Date',
+    'label' => 'Report Date',
     'required' => 1,
     'settings' => array(
       'default_value' => 'now',
@@ -1706,6 +1718,7 @@ function hr_assessments_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_bundles',
     'label' => 'Clusters/Sectors',
+    'required' => FALSE,
     'settings' => array(
       'behaviors' => array(
         'og_widget' => array(
@@ -1719,10 +1732,10 @@ function hr_assessments_field_default_field_instances() {
         ),
         'prepopulate' => array(
           'action' => 'none',
-          'fallback' => 'none',	
+          'fallback' => 'none',
           'providers' => array(
             'url' => 1,
-          ),	
+          ),
           'status' => 1,
         ),
       ),
@@ -2665,7 +2678,6 @@ function hr_assessments_field_default_field_instances() {
   t('Clusters/Sectors');
   t('Collection Method');
   t('Contact(s)');
-  t('Date');
   t('Emergencies');
   t('File');
   t('File (Restricted)');
@@ -2682,6 +2694,7 @@ function hr_assessments_field_default_field_instances() {
   t('Participating Organizations');
   t('Population Types');
   t('Related content');
+  t('Report Date');
   t('Sample size');
   t('Space(s)');
   t('Status');
