@@ -220,20 +220,21 @@ function hr_assessments_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'above',
-      'formatter' => 'field_collection_fields',
+      'formatter' => 'field_collection_view',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'edit' => 'Edit',
-        'delete' => 'Delete',
-        'add' => 'Add',
-        'description' => TRUE,
+        'edit' => '',
+        'delete' => '',
+        'add' => '',
+        'description' => 1,
         'view_mode' => 'full',
       ),
       'context' => 'panelizer',
       'override_title' => 0,
       'override_title_text' => '',
+      'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -255,20 +256,21 @@ function hr_assessments_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'above',
-      'formatter' => 'field_collection_fields',
+      'formatter' => 'field_collection_view',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'edit' => 'Edit',
-        'delete' => 'Delete',
-        'add' => 'Add',
-        'description' => TRUE,
+        'edit' => '',
+        'delete' => '',
+        'add' => '',
+        'description' => 1,
         'view_mode' => 'full',
       ),
       'context' => 'panelizer',
       'override_title' => 0,
       'override_title_text' => '',
+      'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -290,20 +292,21 @@ function hr_assessments_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'above',
-      'formatter' => 'field_collection_fields',
+      'formatter' => 'field_collection_view',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'edit' => 'Edit',
-        'delete' => 'Delete',
-        'add' => 'Add',
-        'description' => TRUE,
+        'edit' => '',
+        'delete' => '',
+        'add' => '',
+        'description' => 1,
         'view_mode' => 'full',
       ),
       'context' => 'panelizer',
       'override_title' => 0,
       'override_title_text' => '',
+      'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array(
